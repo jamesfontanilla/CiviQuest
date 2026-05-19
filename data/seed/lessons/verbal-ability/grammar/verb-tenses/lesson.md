@@ -1,6 +1,8 @@
 # Verb Tenses
 
-## Introduction
+## Explanations
+
+### Introduction
 
 **Verb tenses** indicate WHEN an action takes place — in the past, present, or future — and whether that action is complete, ongoing, or habitual. English has 12 main tenses, and mastering them is critical for the Philippine Civil Service Examination (CSE) at both Professional and Sub-Professional levels.
 
@@ -28,7 +30,7 @@ The Grammar and Correct Usage section of the CSE consistently tests verb tenses 
 
 ---
 
-## Learning Objectives
+### Learning Objectives
 
 After this lesson, you should be able to:
 - Identify all 12 English verb tenses by structure and function
@@ -38,8 +40,6 @@ After this lesson, you should be able to:
 - Avoid common tense-related grammar mistakes tested in the exam
 
 ---
-
-## Core Concept Explanations
 
 
 ### 4.1 Overview of Verb Tenses
@@ -788,7 +788,7 @@ When the main clause is in the past, dependent clauses typically shift back:
 
 ---
 
-## Tense Structure Quick-Reference Chart
+### Tense Structure Quick-Reference Chart
 
 | Tense | Structure | Example |
 |-------|-----------|---------|
@@ -805,6 +805,225 @@ When the main clause is in the past, dependent clauses typically shift back:
 | Future Perfect | will have + V3 | She **will have written**. |
 | Future Perfect Continuous | will have been + V-ing | She **will have been writing**. |
 
+
+---
+
+### Exam Strategies
+
+### Strategy 1: Identify Time Signals First
+
+Before looking at the choices, find the time clue in the sentence:
+- "yesterday," "last week," "in 2020" → Simple Past
+- "since," "for," "already," "yet" → Present Perfect
+- "now," "at the moment," "currently" → Present Continuous
+- "by the time," "before (past event)" → Past Perfect
+- "tomorrow," "next week," "will" → Future
+- "by next year," "by the time (future)" → Future Perfect
+
+### Strategy 2: Check the Sentence Structure
+
+Look for structural clues:
+- "While ___" or "When ___ happened" → Past Continuous for the longer action
+- "If + had + V3" → Third Conditional (past perfect)
+- "He said that..." → Reported speech (backshift tenses)
+- "has/have + V3" → Present Perfect
+- "had + V3" → Past Perfect
+
+### Strategy 3: Elimination Technique
+
+1. Eliminate choices that don't match the time frame
+2. Eliminate choices with wrong subject-verb agreement
+3. Eliminate choices with incorrect verb forms
+4. Choose from remaining options based on tense rules
+
+### Strategy 4: Watch for Tense Consistency
+
+If the sentence has two clauses:
+- Check if both should be in the same tense
+- Check if one should be "earlier" (perfect) than the other
+- Check for reported speech backshift
+
+### Strategy 5: Stative Verb Check
+
+If a continuous form (-ing) is offered as a choice, ask: "Is this verb stative?"
+- If yes (know, believe, own, want, need, understand) → eliminate the continuous option
+
+---
+
+### Common Mistakes to Avoid
+
+| Mistake | Wrong | Correct | Rule |
+|---------|-------|---------|------|
+| Present perfect with specific past time | I **have seen** him yesterday. | I **saw** him yesterday. | Specific past time → simple past |
+| Simple past with "since/for" (ongoing) | She **worked** here since 2018. | She **has worked** here since 2018. | Since/for + still true → present perfect |
+| Stative verb in continuous | I **am knowing** the answer. | I **know** the answer. | Stative verbs don't take -ing |
+| Wrong irregular form | He **has went** home. | He **has gone** home. | Memorize V3 forms |
+| Tense shift in same sentence | She **opens** the door and **walked** in. | She **opened** the door and **walked** in. | Keep tense consistent |
+| Wrong auxiliary | She **have** finished. | She **has** finished. | Third person singular → has |
+| Past perfect without two events | I **had eaten** lunch. (alone) | I **ate** lunch. | Past perfect needs a reference point |
+
+---
+
+### Memory Aids
+
+### Mnemonic: "SINCE = Starting point, FOR = Full duration"
+- **Since** 2020 (a point in time)
+- **For** four years (a length of time)
+
+### Mnemonic: "HAD = the EARLIER past"
+When you see two past events, the one that happened FIRST gets "had":
+- She **had left** (first) before he **arrived** (second).
+
+### Mnemonic: "WILL HAVE = done BEFORE future deadline"
+- By Friday, I **will have finished**. (completed before Friday arrives)
+
+### Tense Identification Hack: "The Auxiliary Tells All"
+
+| If you see... | The tense is... |
+|---------------|-----------------|
+| am/is/are + -ing | Present Continuous |
+| was/were + -ing | Past Continuous |
+| has/have + V3 | Present Perfect |
+| had + V3 | Past Perfect |
+| will + base | Simple Future |
+| will be + -ing | Future Continuous |
+| will have + V3 | Future Perfect |
+| No auxiliary (present) | Simple Present |
+| No auxiliary (past form) | Simple Past |
+
+### Recognition Trick: Signal Word → Tense
+
+Memorize these pairings:
+- **every day** → Simple Present
+- **right now** → Present Continuous
+- **since/for** (still true) → Present Perfect
+- **yesterday/last** → Simple Past
+- **while/when (interrupted)** → Past Continuous
+- **by the time (past)** → Past Perfect
+- **tomorrow/next** → Simple Future
+- **by (future time)** → Future Perfect
+
+---
+
+### Mini Practice Set (20 Questions)
+
+**1.** The government employee ___ to work at 8:00 AM every day.
+- (a) report (b) **reports** (c) reported (d) reporting
+- *Answer: (b) — Habitual action, singular subject → simple present with -s*
+
+**2.** Look! The director ___ toward the conference room.
+- (a) walks (b) walked (c) **is walking** (d) has walked
+- *Answer: (c) — "Look!" signals action happening right now → present continuous*
+
+**3.** She ___ in the government service for fifteen years now.
+- (a) works (b) worked (c) **has worked** (d) is working
+- *Answer: (c) — "For fifteen years" + "now" (still ongoing) → present perfect*
+
+**4.** The committee ___ the budget proposal yesterday afternoon.
+- (a) reviews (b) **reviewed** (c) has reviewed (d) is reviewing
+- *Answer: (b) — "Yesterday afternoon" = specific past time → simple past*
+
+**5.** While the clerk ___ the documents, the fire alarm sounded.
+- (a) files (b) filed (c) **was filing** (d) has filed
+- *Answer: (c) — Ongoing action interrupted by sudden event → past continuous*
+
+**6.** By the time the supervisor arrived, the staff ___ already ___ the meeting.
+- (a) has...started (b) **had...started** (c) is...starting (d) will...start
+- *Answer: (b) — Earlier of two past events → past perfect*
+
+**7.** The department ___ a new policy next quarter.
+- (a) implements (b) implemented (c) **will implement** (d) has implemented
+- *Answer: (c) — "Next quarter" = future time → simple future*
+
+**8.** By December, she ___ her probationary period.
+- (a) completes (b) completed (c) **will have completed** (d) is completing
+- *Answer: (c) — Completed before a future point → future perfect*
+
+**9.** He said that he ___ the report the previous day.
+- (a) submits (b) **had submitted** (c) has submitted (d) will submit
+- *Answer: (b) — Reported speech; original "submitted" backshifts to "had submitted"*
+
+**10.** If she ___ harder, she would have passed the examination.
+- (a) studies (b) studied (c) **had studied** (d) has studied
+- *Answer: (c) — Third conditional (unreal past) → past perfect in if-clause*
+
+**11.** The employees ___ for the announcement since this morning.
+- (a) wait (b) waited (c) **have been waiting** (d) are waiting
+- *Answer: (c) — "Since this morning" + still waiting → present perfect continuous*
+
+**12.** At this time tomorrow, I ___ the civil service examination.
+- (a) take (b) took (c) **will be taking** (d) have taken
+- *Answer: (c) — Action in progress at a specific future time → future continuous*
+
+**13.** The news about the promotion ___ everyone in the office.
+- (a) surprise (b) **surprised** (c) surprising (d) have surprised
+- *Answer: (b) — Completed past action (no time signal but context implies past) → simple past*
+
+**14.** She ___ three memos before lunch today.
+- (a) writes (b) wrote (c) **has written** (d) is writing
+- *Answer: (c) — "Today" (period not yet over) + completed quantity → present perfect*
+
+**15.** The applicant ___ nervously while waiting for the interview.
+- (a) paces (b) **was pacing** (c) has paced (d) paced
+- *Answer: (b) — Background action during a past situation → past continuous*
+
+**16.** Every Friday, the team ___ a progress report.
+- (a) **submits** (b) submitted (c) is submitting (d) has submitted
+- *Answer: (a) — "Every Friday" = habitual action → simple present*
+
+**17.** By the time he retires, he ___ the government for 35 years.
+- (a) serves (b) served (c) has served (d) **will have served**
+- *Answer: (d) — Duration completed by a future point → future perfect*
+
+**18.** The manager ___ the new policy when I entered the room.
+- (a) explains (b) explained (c) **was explaining** (d) has explained
+- *Answer: (c) — Ongoing action at the moment of interruption → past continuous*
+
+**19.** I ___ that movie twice already.
+- (a) see (b) saw (c) **have seen** (d) am seeing
+- *Answer: (c) — Life experience with "already" (no specific time) → present perfect*
+
+**20.** The office ___ at 5:00 PM every day.
+- (a) close (b) **closes** (c) closed (d) is closing
+- *Answer: (b) — Scheduled/habitual event, singular subject → simple present*
+
+---
+
+### Quick Recap
+
+| Tense | When to Use | Key Signal Words |
+|-------|-------------|-----------------|
+| Simple Present | habits, facts, schedules | always, every day, usually |
+| Present Continuous | now, temporary, planned future | now, currently, at the moment |
+| Present Perfect | unspecified past, since/for, experience | since, for, already, yet, ever |
+| Present Perfect Continuous | duration up to now | for, since, all day, how long |
+| Simple Past | completed past, specific time | yesterday, last week, ago, in 2020 |
+| Past Continuous | interrupted/background past action | while, when, at that time |
+| Past Perfect | earlier of two past events | before, after, by the time, already |
+| Past Perfect Continuous | duration before a past event | for, since + past reference |
+| Simple Future | predictions, plans, promises | tomorrow, next week, will |
+| Future Continuous | in progress at future time | this time tomorrow, at 3 PM |
+| Future Perfect | completed before future point | by next year, by the time |
+| Future Perfect Continuous | duration up to future point | by + future time + for |
+
+---
+
+### Mastery Checklist
+
+After completing this lesson, you can now:
+
+✅ Identify all 12 English verb tenses by their structure and auxiliary verbs
+✅ Apply correct tense rules based on time signals and context
+✅ Maintain tense consistency within sentences and paragraphs
+✅ Handle reported speech and sequence of tenses
+✅ Recognize and avoid common tense errors (stative verbs, wrong irregulars, tense shifts)
+✅ Use signal words to quickly identify the required tense in CSE questions
+✅ Apply elimination techniques under exam time pressure
+✅ Distinguish between present perfect and simple past
+✅ Use past perfect correctly for sequencing two past events
+✅ Solve conditional sentence questions (zero, first, second, third)
+
+---
 
 ---
 
@@ -916,222 +1135,20 @@ When the main clause is in the past, dependent clauses typically shift back:
 
 ---
 
-## Exam Strategies
-
-### Strategy 1: Identify Time Signals First
-
-Before looking at the choices, find the time clue in the sentence:
-- "yesterday," "last week," "in 2020" → Simple Past
-- "since," "for," "already," "yet" → Present Perfect
-- "now," "at the moment," "currently" → Present Continuous
-- "by the time," "before (past event)" → Past Perfect
-- "tomorrow," "next week," "will" → Future
-- "by next year," "by the time (future)" → Future Perfect
-
-### Strategy 2: Check the Sentence Structure
-
-Look for structural clues:
-- "While ___" or "When ___ happened" → Past Continuous for the longer action
-- "If + had + V3" → Third Conditional (past perfect)
-- "He said that..." → Reported speech (backshift tenses)
-- "has/have + V3" → Present Perfect
-- "had + V3" → Past Perfect
-
-### Strategy 3: Elimination Technique
-
-1. Eliminate choices that don't match the time frame
-2. Eliminate choices with wrong subject-verb agreement
-3. Eliminate choices with incorrect verb forms
-4. Choose from remaining options based on tense rules
-
-### Strategy 4: Watch for Tense Consistency
-
-If the sentence has two clauses:
-- Check if both should be in the same tense
-- Check if one should be "earlier" (perfect) than the other
-- Check for reported speech backshift
-
-### Strategy 5: Stative Verb Check
-
-If a continuous form (-ing) is offered as a choice, ask: "Is this verb stative?"
-- If yes (know, believe, own, want, need, understand) → eliminate the continuous option
-
 ---
 
-## Common Mistakes to Avoid
+## Key Takeaways
 
-| Mistake | Wrong | Correct | Rule |
-|---------|-------|---------|------|
-| Present perfect with specific past time | I **have seen** him yesterday. | I **saw** him yesterday. | Specific past time → simple past |
-| Simple past with "since/for" (ongoing) | She **worked** here since 2018. | She **has worked** here since 2018. | Since/for + still true → present perfect |
-| Stative verb in continuous | I **am knowing** the answer. | I **know** the answer. | Stative verbs don't take -ing |
-| Wrong irregular form | He **has went** home. | He **has gone** home. | Memorize V3 forms |
-| Tense shift in same sentence | She **opens** the door and **walked** in. | She **opened** the door and **walked** in. | Keep tense consistent |
-| Wrong auxiliary | She **have** finished. | She **has** finished. | Third person singular → has |
-| Past perfect without two events | I **had eaten** lunch. (alone) | I **ate** lunch. | Past perfect needs a reference point |
-
----
-
-## Memory Aids
-
-### Mnemonic: "SINCE = Starting point, FOR = Full duration"
-- **Since** 2020 (a point in time)
-- **For** four years (a length of time)
-
-### Mnemonic: "HAD = the EARLIER past"
-When you see two past events, the one that happened FIRST gets "had":
-- She **had left** (first) before he **arrived** (second).
-
-### Mnemonic: "WILL HAVE = done BEFORE future deadline"
-- By Friday, I **will have finished**. (completed before Friday arrives)
-
-### Tense Identification Hack: "The Auxiliary Tells All"
-
-| If you see... | The tense is... |
-|---------------|-----------------|
-| am/is/are + -ing | Present Continuous |
-| was/were + -ing | Past Continuous |
-| has/have + V3 | Present Perfect |
-| had + V3 | Past Perfect |
-| will + base | Simple Future |
-| will be + -ing | Future Continuous |
-| will have + V3 | Future Perfect |
-| No auxiliary (present) | Simple Present |
-| No auxiliary (past form) | Simple Past |
-
-### Recognition Trick: Signal Word → Tense
-
-Memorize these pairings:
-- **every day** → Simple Present
-- **right now** → Present Continuous
-- **since/for** (still true) → Present Perfect
-- **yesterday/last** → Simple Past
-- **while/when (interrupted)** → Past Continuous
-- **by the time (past)** → Past Perfect
-- **tomorrow/next** → Simple Future
-- **by (future time)** → Future Perfect
-
----
-
-## Mini Practice Set (20 Questions)
-
-**1.** The government employee ___ to work at 8:00 AM every day.
-- (a) report (b) **reports** (c) reported (d) reporting
-- *Answer: (b) — Habitual action, singular subject → simple present with -s*
-
-**2.** Look! The director ___ toward the conference room.
-- (a) walks (b) walked (c) **is walking** (d) has walked
-- *Answer: (c) — "Look!" signals action happening right now → present continuous*
-
-**3.** She ___ in the government service for fifteen years now.
-- (a) works (b) worked (c) **has worked** (d) is working
-- *Answer: (c) — "For fifteen years" + "now" (still ongoing) → present perfect*
-
-**4.** The committee ___ the budget proposal yesterday afternoon.
-- (a) reviews (b) **reviewed** (c) has reviewed (d) is reviewing
-- *Answer: (b) — "Yesterday afternoon" = specific past time → simple past*
-
-**5.** While the clerk ___ the documents, the fire alarm sounded.
-- (a) files (b) filed (c) **was filing** (d) has filed
-- *Answer: (c) — Ongoing action interrupted by sudden event → past continuous*
-
-**6.** By the time the supervisor arrived, the staff ___ already ___ the meeting.
-- (a) has...started (b) **had...started** (c) is...starting (d) will...start
-- *Answer: (b) — Earlier of two past events → past perfect*
-
-**7.** The department ___ a new policy next quarter.
-- (a) implements (b) implemented (c) **will implement** (d) has implemented
-- *Answer: (c) — "Next quarter" = future time → simple future*
-
-**8.** By December, she ___ her probationary period.
-- (a) completes (b) completed (c) **will have completed** (d) is completing
-- *Answer: (c) — Completed before a future point → future perfect*
-
-**9.** He said that he ___ the report the previous day.
-- (a) submits (b) **had submitted** (c) has submitted (d) will submit
-- *Answer: (b) — Reported speech; original "submitted" backshifts to "had submitted"*
-
-**10.** If she ___ harder, she would have passed the examination.
-- (a) studies (b) studied (c) **had studied** (d) has studied
-- *Answer: (c) — Third conditional (unreal past) → past perfect in if-clause*
-
-**11.** The employees ___ for the announcement since this morning.
-- (a) wait (b) waited (c) **have been waiting** (d) are waiting
-- *Answer: (c) — "Since this morning" + still waiting → present perfect continuous*
-
-**12.** At this time tomorrow, I ___ the civil service examination.
-- (a) take (b) took (c) **will be taking** (d) have taken
-- *Answer: (c) — Action in progress at a specific future time → future continuous*
-
-**13.** The news about the promotion ___ everyone in the office.
-- (a) surprise (b) **surprised** (c) surprising (d) have surprised
-- *Answer: (b) — Completed past action (no time signal but context implies past) → simple past*
-
-**14.** She ___ three memos before lunch today.
-- (a) writes (b) wrote (c) **has written** (d) is writing
-- *Answer: (c) — "Today" (period not yet over) + completed quantity → present perfect*
-
-**15.** The applicant ___ nervously while waiting for the interview.
-- (a) paces (b) **was pacing** (c) has paced (d) paced
-- *Answer: (b) — Background action during a past situation → past continuous*
-
-**16.** Every Friday, the team ___ a progress report.
-- (a) **submits** (b) submitted (c) is submitting (d) has submitted
-- *Answer: (a) — "Every Friday" = habitual action → simple present*
-
-**17.** By the time he retires, he ___ the government for 35 years.
-- (a) serves (b) served (c) has served (d) **will have served**
-- *Answer: (d) — Duration completed by a future point → future perfect*
-
-**18.** The manager ___ the new policy when I entered the room.
-- (a) explains (b) explained (c) **was explaining** (d) has explained
-- *Answer: (c) — Ongoing action at the moment of interruption → past continuous*
-
-**19.** I ___ that movie twice already.
-- (a) see (b) saw (c) **have seen** (d) am seeing
-- *Answer: (c) — Life experience with "already" (no specific time) → present perfect*
-
-**20.** The office ___ at 5:00 PM every day.
-- (a) close (b) **closes** (c) closed (d) is closing
-- *Answer: (b) — Scheduled/habitual event, singular subject → simple present*
-
----
-
-## Quick Recap
-
-| Tense | When to Use | Key Signal Words |
-|-------|-------------|-----------------|
-| Simple Present | habits, facts, schedules | always, every day, usually |
-| Present Continuous | now, temporary, planned future | now, currently, at the moment |
-| Present Perfect | unspecified past, since/for, experience | since, for, already, yet, ever |
-| Present Perfect Continuous | duration up to now | for, since, all day, how long |
-| Simple Past | completed past, specific time | yesterday, last week, ago, in 2020 |
-| Past Continuous | interrupted/background past action | while, when, at that time |
-| Past Perfect | earlier of two past events | before, after, by the time, already |
-| Past Perfect Continuous | duration before a past event | for, since + past reference |
-| Simple Future | predictions, plans, promises | tomorrow, next week, will |
-| Future Continuous | in progress at future time | this time tomorrow, at 3 PM |
-| Future Perfect | completed before future point | by next year, by the time |
-| Future Perfect Continuous | duration up to future point | by + future time + for |
-
----
-
-## Mastery Checklist
-
-After completing this lesson, you can now:
-
-✅ Identify all 12 English verb tenses by their structure and auxiliary verbs
-✅ Apply correct tense rules based on time signals and context
-✅ Maintain tense consistency within sentences and paragraphs
-✅ Handle reported speech and sequence of tenses
-✅ Recognize and avoid common tense errors (stative verbs, wrong irregulars, tense shifts)
-✅ Use signal words to quickly identify the required tense in CSE questions
-✅ Apply elimination techniques under exam time pressure
-✅ Distinguish between present perfect and simple past
-✅ Use past perfect correctly for sequencing two past events
-✅ Solve conditional sentence questions (zero, first, second, third)
-
----
+- The verb must match the TIME of the action — identify the time signal first before choosing the tense
+- Simple tenses state facts or completed actions; continuous tenses show actions in progress; perfect tenses emphasize completion before a reference point
+- Signal words are your strongest clue: "every day" → simple present, "right now" → present continuous, "since/for" → present perfect, "yesterday" → simple past, "by the time" → past/future perfect
+- When two past events are mentioned, the EARLIER one uses past perfect (had + V3) and the LATER one uses simple past
+- Present perfect (has/have + V3) is used when no specific past time is mentioned or when the action connects to the present
+- Stative verbs (know, believe, own, want, understand) CANNOT be used in continuous form
+- In reported speech, tenses shift back: present → past, past → past perfect, will → would
+- First conditional uses present simple in the if-clause (NOT will); second conditional uses past simple; third conditional uses past perfect
+- "The number of" takes a singular verb; "A number of" takes a plural verb
+- Maintain tense consistency within sentences and paragraphs unless there is a logical reason to shift (general truths, reporting current relevance)
 
 ## Summary
 
