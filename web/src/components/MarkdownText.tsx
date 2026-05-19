@@ -2,13 +2,14 @@ import React from "react";
 
 /**
  * Lightweight inline markdown renderer.
- * Handles: **bold**, *italic*, `code`, - bullet lists, and line breaks.
+ * Handles: **bold**, *italic*, `code`, - bullet lists, | tables |, and line breaks.
  * No external dependencies.
  */
 export function MarkdownText({ text, style }: { text: string; style?: React.CSSProperties }) {
   const lines = text.split("\n");
   const elements: React.ReactNode[] = [];
   let bulletBuffer: string[] = [];
+  let tableBuffer: string[] = [];
   let key = 0;
 
   function flushBullets() {
@@ -26,8 +27,25 @@ export function MarkdownText({ text, style }: { text: string; style?: React.CSSP
     }
   }
 
+  function flushTable() {
+    if (tableBuffer.length > 0) {
+      elements.push(<MarkdownTable key={key++} rows={tableBuffer} />);
+      tableBuffer = [];
+    }
+  }
+
   for (const line of lines) {
     const trimmed = line.trim();
+
+    // Table row: starts with |
+    if (trimmed.startsWith("|") && trimmed.endsWith("|")) {
+      flushBullets();
+      tableBuffer.push(trimmed);
+      continue;
+    }
+
+    // Flush any pending table before non-table content
+    flushTable();
 
     // Bullet point
     if (trimmed.startsWith("- ")) {
@@ -53,8 +71,84 @@ export function MarkdownText({ text, style }: { text: string; style?: React.CSSP
   }
 
   flushBullets();
+  flushTable();
 
   return <div style={style}>{elements}</div>;
+}
+
+/**
+ * Renders a markdown table from buffered pipe-delimited rows.
+ * Detects the separator row (|---|---|) and splits header from body.
+ */
+function MarkdownTable({ rows }: { rows: string[] }) {
+  function parseCells(row: string): string[] {
+    return row
+      .split("|")
+      .slice(1, -1) // remove empty first/last from leading/trailing |
+      .map((cell) => cell.trim());
+  }
+
+  function isSeparatorRow(row: string): boolean {
+    return /^\|[\s\-:|]+\|$/.test(row);
+  }
+
+  // Find separator row index
+  const sepIdx = rows.findIndex(isSeparatorRow);
+  const headerRows = sepIdx > 0 ? rows.slice(0, sepIdx) : [];
+  const bodyRows = sepIdx >= 0 ? rows.slice(sepIdx + 1) : rows;
+
+  const tableStyle: React.CSSProperties = {
+    width: "100%",
+    borderCollapse: "collapse",
+    margin: "0.75rem 0",
+    fontSize: "0.9em",
+    lineHeight: 1.5,
+  };
+
+  const thStyle: React.CSSProperties = {
+    padding: "0.5rem 0.75rem",
+    borderBottom: "2px solid var(--color-border, #ddd)",
+    textAlign: "left",
+    fontWeight: 600,
+    background: "var(--color-bg-secondary, rgba(0,0,0,0.03))",
+  };
+
+  const tdStyle: React.CSSProperties = {
+    padding: "0.5rem 0.75rem",
+    borderBottom: "1px solid var(--color-border, #eee)",
+    textAlign: "left",
+  };
+
+  return (
+    <div style={{ overflowX: "auto", margin: "0.75rem 0" }}>
+      <table style={tableStyle}>
+        {headerRows.length > 0 && (
+          <thead>
+            {headerRows.map((row, ri) => (
+              <tr key={ri}>
+                {parseCells(row).map((cell, ci) => (
+                  <th key={ci} style={thStyle}>
+                    <InlineMarkdown text={cell} />
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+        )}
+        <tbody>
+          {bodyRows.map((row, ri) => (
+            <tr key={ri}>
+              {parseCells(row).map((cell, ci) => (
+                <td key={ci} style={tdStyle}>
+                  <InlineMarkdown text={cell} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 /**
