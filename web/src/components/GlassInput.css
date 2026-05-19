@@ -1,0 +1,62 @@
+.glass-input-group {
+  margin-bottom: 1.25rem;
+}
+
+.glass-input-label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.glass-input-wrapper {
+  position: relative;
+}
+
+.glass-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--glass-bg-subtle);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1px solid var(--glass-border-medium);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  box-shadow: var(--shadow-inner);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.glass-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: var(--focus-ring), var(--shadow-inner);
+}
+
+.glass-input-error {
+  border-color: var(--color-danger);
+}
+
+.glass-input-error-text {
+  margin-top: 0.25rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+}
+
+.glass-input-icon {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+.glass-input-wrapper:has(.glass-input-icon) .glass-input {
+  padding-left: 2.5rem;
+}

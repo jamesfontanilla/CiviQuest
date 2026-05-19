@@ -1,0 +1,168 @@
+/* Glass Card containment for repaint optimization */
+.glass-card {
+  contain: layout style paint;
+}
+
+/* Glass Surfaces */
+.glass-sm {
+  background: var(--glass-bg-subtle);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1px solid var(--glass-border-light);
+  border-radius: var(--radius-lg);
+}
+
+.glass-md {
+  background: var(--glass-bg-medium);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border-medium);
+  border-radius: var(--radius-lg);
+}
+
+.glass-lg {
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur-lg);
+  -webkit-backdrop-filter: var(--glass-blur-lg);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-lg);
+}
+
+/* Top-edge highlight (light reflection simulation) */
+.glass-sm::before,
+.glass-md::before,
+.glass-lg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  pointer-events: none;
+}
+
+/* Gradient Backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-metallic));
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, var(--color-background), var(--color-surface));
+}
+
+/* Glass Buttons */
+.btn-glass {
+  background: var(--glass-bg-medium);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1px solid var(--glass-border-medium);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-glass:hover {
+  box-shadow: var(--shadow-glow);
+  background: var(--glass-bg-strong);
+}
+
+.btn-glass-primary {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-metallic));
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  color: var(--color-background-warm);
+  font-weight: 600;
+}
+
+.btn-glass-primary:hover {
+  box-shadow: 0 0 24px rgba(212, 165, 116, 0.25);
+}
+
+.btn-glass-secondary {
+  background: var(--glass-bg-medium);
+  border: 1px solid var(--glass-border-medium);
+  color: var(--color-text);
+}
+
+.btn-glass-secondary:hover {
+  background: var(--glass-bg-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-glass-ghost {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.btn-glass-ghost:hover {
+  background: var(--glass-bg-subtle);
+  border-color: var(--glass-border-light);
+}
+
+.btn-glass-danger {
+  background: linear-gradient(135deg, var(--color-danger), rgba(220, 80, 60, 0.8));
+  border: 1px solid rgba(220, 80, 60, 0.3);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-glass-danger:hover {
+  box-shadow: 0 0 24px rgba(220, 80, 60, 0.25);
+}
+
+.btn-glass:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* @supports fallback */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-sm,
+  .glass-md,
+  .glass-lg {
+    background: rgba(78, 52, 46, 0.85);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive Glass Adjustments */
+@media (max-width: 640px) {
+  .glass-sm,
+  .glass-md,
+  .glass-lg {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  .glass-sm { background: rgba(78, 52, 46, 0.12); }
+  .glass-md { background: rgba(78, 52, 46, 0.20); }
+  .glass-lg { background: rgba(78, 52, 46, 0.30); }
+
+  /* Touch targets: minimum 44px on mobile */
+  .btn-glass {
+    min-height: 44px;
+  }
+}

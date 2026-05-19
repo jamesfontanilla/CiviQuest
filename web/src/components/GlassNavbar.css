@@ -1,0 +1,122 @@
+.glass-navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  transition: background var(--transition-normal),
+              backdrop-filter var(--transition-normal),
+              border-color var(--transition-normal);
+}
+
+.glass-navbar-logo {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.glass-navbar-desktop {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.glass-navbar-link {
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.glass-navbar-link:hover {
+  background: var(--glass-bg-subtle);
+  color: var(--color-text);
+}
+
+.glass-navbar-link.active {
+  background: var(--glass-bg-medium);
+  color: var(--color-accent);
+}
+
+.glass-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.glass-navbar-profile {
+  padding: 0.375rem 0.625rem;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.glass-navbar-profile:hover {
+  background: var(--glass-bg-subtle);
+}
+
+.glass-navbar-hamburger {
+  display: none;
+  padding: 0.375rem 0.5rem;
+  font-size: 1.25rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.glass-navbar-hamburger:hover {
+  background: var(--glass-bg-subtle);
+}
+
+.glass-mobile-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--shadow-depth);
+}
+
+.glass-mobile-drawer-link {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.glass-mobile-drawer-link:hover {
+  background: var(--glass-bg-subtle);
+}
+
+.glass-mobile-drawer-link.active {
+  background: var(--glass-bg-medium);
+  color: var(--color-accent);
+}
+
+/* Mobile: show hamburger, hide desktop nav */
+@media (max-width: 768px) {
+  .glass-navbar-desktop {
+    display: none;
+  }
+
+  .glass-navbar-hamburger {
+    display: inline-flex;
+  }
+}
