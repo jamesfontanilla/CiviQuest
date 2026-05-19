@@ -1,14 +1,17 @@
-"""Seed content loader for Subject-Verb Agreement lesson and question bank.
+"""Seed content loader for Grammar and Correct Usage lessons and question banks.
 
-Loads the authored lesson (Markdown → LessonContent JSON) and 500-question bank
+Loads authored lessons (Markdown → LessonContent JSON) and question banks
 into the modules hierarchy for BOTH Professional and Sub-Professional categories.
 
 Hierarchy created:
   Module: "Verbal Ability" (one per category)
     Topic: "Grammar and Correct Usage"
-      Subtopic: "Subject-Verb Agreement"
-        Lesson: parsed from data/seed/lessons/.../lesson.md
-        Questions: loaded from data/seed/questions/.../questions.json
+      Subtopic 1: "Subject-Verb Agreement"
+        Lesson: parsed from data/seed/lessons/.../subject-verb-agreement/lesson.md
+        Questions: loaded from data/seed/questions/.../subject-verb-agreement/questions.json
+      Subtopic 2: "Verb Tenses"
+        Lesson: parsed from data/seed/lessons/.../verb-tenses/lesson.md
+        Questions: loaded from data/seed/questions/.../verb-tenses/questions.json
 
 Usage:
     python -m scripts.seed_content
@@ -43,8 +46,18 @@ from app.infrastructure.database.base import Base
 
 
 SEED_BASE = Path(__file__).resolve().parent.parent / "data" / "seed"
-LESSON_PATH = SEED_BASE / "lessons" / "verbal-ability" / "grammar" / "subject-verb-agreement" / "lesson.md"
-QUESTIONS_PATH = SEED_BASE / "questions" / "verbal-ability" / "grammar" / "subject-verb-agreement" / "questions.json"
+
+# Subtopic 1: Subject-Verb Agreement
+SVA_LESSON_PATH = SEED_BASE / "lessons" / "verbal-ability" / "grammar" / "subject-verb-agreement" / "lesson.md"
+SVA_QUESTIONS_PATH = SEED_BASE / "questions" / "verbal-ability" / "grammar" / "subject-verb-agreement" / "questions.json"
+
+# Subtopic 2: Verb Tenses
+VT_LESSON_PATH = SEED_BASE / "lessons" / "verbal-ability" / "grammar" / "verb-tenses" / "lesson.md"
+VT_QUESTIONS_PATH = SEED_BASE / "questions" / "verbal-ability" / "grammar" / "verb-tenses" / "questions.json"
+
+# Legacy aliases for backward compatibility
+LESSON_PATH = SVA_LESSON_PATH
+QUESTIONS_PATH = SVA_QUESTIONS_PATH
 
 
 # --- Markdown parser ---
@@ -144,10 +157,15 @@ CATEGORY_MAP = {
 # --- Main seed function ---
 
 def seed_content(session: Session) -> dict[str, Any]:
-    """Seed the Verbal Ability / Grammar / Subject-Verb Agreement content.
+    """Seed the Verbal Ability / Grammar content for both categories.
 
-    Creates the module hierarchy for BOTH categories and loads the lesson
-    and all 500 questions. Idempotent: skips if the module slug already exists.
+    Creates the module hierarchy for BOTH categories and loads lessons
+    and questions for all subtopics. Idempotent: skips if the module slug
+    already exists.
+
+    Subtopics seeded:
+      1. Subject-Verb Agreement (500 questions)
+      2. Verb Tenses (500 questions)
     """
     results: dict[str, Any] = {"modules": [], "questions_loaded": 0}
 
@@ -158,16 +176,43 @@ def seed_content(session: Session) -> dict[str, Any]:
     if existing is not None:
         return {"status": "already_seeded", "module_id": existing.id}
 
-    # Load source files
-    if not LESSON_PATH.exists():
-        raise FileNotFoundError(f"Lesson file not found: {LESSON_PATH}")
-    if not QUESTIONS_PATH.exists():
-        raise FileNotFoundError(f"Questions file not found: {QUESTIONS_PATH}")
+    # Load source files — Subtopic 1: Subject-Verb Agreement
+    if not SVA_LESSON_PATH.exists():
+        raise FileNotFoundError(f"Lesson file not found: {SVA_LESSON_PATH}")
+    if not SVA_QUESTIONS_PATH.exists():
+        raise FileNotFoundError(f"Questions file not found: {SVA_QUESTIONS_PATH}")
 
-    lesson_md = LESSON_PATH.read_text(encoding="utf-8")
-    lesson_content = parse_lesson_markdown(lesson_md)
+    sva_lesson_md = SVA_LESSON_PATH.read_text(encoding="utf-8")
+    sva_lesson_content = parse_lesson_markdown(sva_lesson_md)
+    sva_questions_raw = json.loads(SVA_QUESTIONS_PATH.read_text(encoding="utf-8"))
 
-    questions_raw = json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))
+    # Load source files — Subtopic 2: Verb Tenses
+    if not VT_LESSON_PATH.exists():
+        raise FileNotFoundError(f"Lesson file not found: {VT_LESSON_PATH}")
+    if not VT_QUESTIONS_PATH.exists():
+        raise FileNotFoundError(f"Questions file not found: {VT_QUESTIONS_PATH}")
+
+    vt_lesson_md = VT_LESSON_PATH.read_text(encoding="utf-8")
+    vt_lesson_content = parse_lesson_markdown(vt_lesson_md)
+    vt_questions_raw = json.loads(VT_QUESTIONS_PATH.read_text(encoding="utf-8"))
+
+    # Define subtopics to seed
+    subtopics_data = [
+        {
+            "slug": "subject-verb-agreement",
+            "title": "Subject-Verb Agreement",
+            "order_index": 1,
+            "lesson_content": sva_lesson_content,
+            "questions": sva_questions_raw,
+        },
+        {
+            "slug": "verb-tenses",
+            "title": "Verb Tenses",
+            "order_index": 2,
+            "lesson_content": vt_lesson_content,
+            "questions": vt_questions_raw,
+        },
+    ]
 
     # Create hierarchy for BOTH categories
     for cat_key, cat_value in [
@@ -195,55 +240,50 @@ def seed_content(session: Session) -> dict[str, Any]:
         session.add(topic)
         session.flush()
 
-        # Subtopic
-        subtopic = Subtopic(
-            topic_id=topic.id,
-            slug="subject-verb-agreement",
-            title="Subject-Verb Agreement",
-            order_index=1,
-        )
-        session.add(subtopic)
-        session.flush()
-
-        # Lesson
-        lesson = Lesson(
-            subtopic_id=subtopic.id,
-            content_json=lesson_content,
-            status=LessonStatus.PUBLISHED.value,
-        )
-        session.add(lesson)
-
-        # Questions — load all 500 for this category's subtopic
-        # Filter questions by category match
-        cat_label = "Professional" if cat_key == "professional" else "Sub-Professional"
-        cat_questions = [q for q in questions_raw if q["category"] == cat_label]
-
-        # If all questions are the same category (all English now), load all for both
-        # Since the user wants this available to both categories, load ALL 500 for each
-        for q in questions_raw:
-            question = Question(
-                subtopic_id=subtopic.id,
+        # Seed each subtopic
+        for st_data in subtopics_data:
+            subtopic = Subtopic(
                 topic_id=topic.id,
-                module_id=module.id,
-                category=cat_value,
-                level_scope=LevelScope.SUBTOPIC.value,
-                stem=q["question"],
-                options=q["choices"],
-                correct_answer=q["answer"],
-                explanation=q["explanation"],
-                difficulty=DIFFICULTY_MAP.get(q["difficulty"], Difficulty.EASY.value),
-                qtype=QuestionType.MULTIPLE_CHOICE.value,
-                is_active=True,
+                slug=st_data["slug"],
+                title=st_data["title"],
+                order_index=st_data["order_index"],
             )
-            session.add(question)
+            session.add(subtopic)
+            session.flush()
+
+            # Lesson
+            lesson = Lesson(
+                subtopic_id=subtopic.id,
+                content_json=st_data["lesson_content"],
+                status=LessonStatus.PUBLISHED.value,
+            )
+            session.add(lesson)
+
+            # Questions — load all for this category's subtopic
+            for q in st_data["questions"]:
+                question = Question(
+                    subtopic_id=subtopic.id,
+                    topic_id=topic.id,
+                    module_id=module.id,
+                    category=cat_value,
+                    level_scope=LevelScope.SUBTOPIC.value,
+                    stem=q["question"],
+                    options=q["choices"],
+                    correct_answer=q["answer"],
+                    explanation=q["explanation"],
+                    difficulty=DIFFICULTY_MAP.get(q["difficulty"], Difficulty.EASY.value),
+                    qtype=QuestionType.MULTIPLE_CHOICE.value,
+                    is_active=True,
+                )
+                session.add(question)
+
+            results["questions_loaded"] += len(st_data["questions"])
 
         results["modules"].append({
             "category": cat_value,
             "module_id": module.id,
             "topic_id": topic.id,
-            "subtopic_id": subtopic.id,
         })
-        results["questions_loaded"] += len(questions_raw)
 
     session.commit()
     results["status"] = "seeded"

@@ -60,7 +60,7 @@ export function LessonReader() {
   async function handleMarkComplete() {
     setCompleting(true);
     try {
-      await apiClient.post(`/v1/subtopics/${subtopicId}/lesson:complete`);
+      await apiClient.post(`/v1/subtopics/${subtopicId}/lesson:complete`, {});
       setCompleted(true);
       toast.success("✅ Lesson marked complete");
     } catch (err: unknown) {
