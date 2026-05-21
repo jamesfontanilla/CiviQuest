@@ -25,13 +25,19 @@ from app.infrastructure.database.base import Base
 from app.features.users.models import User  # noqa: F401
 from app.features.auth.models import Session as AuthSession, LoginAttempt, UserLockout  # noqa: F401
 from app.features.otp.models import OTP  # noqa: F401
-from app.features.content.models import Module, Topic, Subtopic, Lesson, Question  # noqa: F401
+from app.features.content.models import Module, Topic, Subtopic, Lesson, Question, QuestionRejectionLog  # noqa: F401
 from app.features.quizzes.models import QuizAttempt, QuizAttemptAnswer  # noqa: F401
 from app.features.mock_exams.models import MockExamConfig, MockExamAttempt, MockExamAttemptAnswer  # noqa: F401
 from app.features.progress.models import LessonCompletion, UserTopicProgress, UserModuleProgress  # noqa: F401
 from app.features.xp.models import UserXP, XPEvent  # noqa: F401
 from app.features.achievements.models import Achievement, UserAchievement  # noqa: F401
 from app.features.audit.models import AuditLog  # noqa: F401
+from app.features.tutor.models import TutorInteraction  # noqa: F401
+from app.features.focus.models import FocusSession  # noqa: F401
+from app.features.planner.models import StudyPlan, StudyPlanDay  # noqa: F401
+from app.features.mastery.models import UserSubtopicMastery, ReviewSchedule  # noqa: F401
+from app.features.gamification.models import UserDailyGoal, StreakFreeze, XPMultiplier, Tournament, TournamentParticipant  # noqa: F401
+from app.features.announcements.models import Announcement, AnnouncementDismissal  # noqa: F401
 
 from scripts.seed import seed_database
 from scripts.seed_content import seed_content
@@ -39,7 +45,15 @@ from scripts.seed_content import seed_content
 
 def main():
     # Recreate all tables (fresh start)
-    Base.metadata.drop_all(bind=engine)
+    # Use raw DROP SCHEMA CASCADE to avoid FK ordering issues on Postgres
+    from sqlalchemy import text
+
+    with engine.begin() as conn:
+        if str(engine.url).startswith("sqlite"):
+            Base.metadata.drop_all(bind=conn)
+        else:
+            conn.execute(text("DROP SCHEMA public CASCADE"))
+            conn.execute(text("CREATE SCHEMA public"))
     Base.metadata.create_all(bind=engine)
     print("Database reset complete.")
 

@@ -51,22 +51,29 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     from app.infrastructure.database.base import Base
     from app.infrastructure.database.session import SessionLocal, engine
 
-    Base.metadata.create_all(bind=engine)
-    session = SessionLocal()
     try:
-        from app.features.users.models import User
+        Base.metadata.create_all(bind=engine)
+        session = SessionLocal()
+        try:
+            from app.features.users.models import User
 
-        admin_exists = session.query(User).filter(
-            User.email == "admin@cse.local"
-        ).first()
-        if admin_exists is None:
-            from scripts.seed import seed_database
+            admin_exists = session.query(User).filter(
+                User.email == "admin@cse.local"
+            ).first()
+            if admin_exists is None:
+                from scripts.seed import seed_database
 
-            seed_database(session)
-    except Exception:
-        pass  # Non-fatal: app still boots even if seed fails
-    finally:
-        session.close()
+                seed_database(session)
+        finally:
+            session.close()
+    except Exception as exc:
+        import logging
+
+        logging.getLogger(__name__).error(
+            "DB initialization failed (app will still boot): %s", exc
+        )
+        # Non-fatal: app boots without DB init. Endpoints that need the DB
+        # will fail individually, but /health will still respond.
 
     start_scheduler()
     try:
