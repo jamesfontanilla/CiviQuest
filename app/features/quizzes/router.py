@@ -78,7 +78,7 @@ def get_quiz_service(db: Session = Depends(get_db)) -> QuizService:
 )
 def start_subtopic_quiz(
     subtopic_id: int,
-    payload: QuizStartRequest = QuizStartRequest(),
+    payload: QuizStartRequest | None = None,
     user: User = Depends(require_no_active_mock),
     service: QuizService = Depends(get_quiz_service),
 ) -> QuizAttemptInProgressResponse:
@@ -91,7 +91,7 @@ def start_subtopic_quiz(
     return service.start_subtopic_quiz(
         user=user,
         subtopic_id=subtopic_id,
-        time_limit_seconds=payload.time_limit_seconds,
+        time_limit_seconds=payload.time_limit_seconds if payload else None,
     )
 
 
@@ -102,7 +102,7 @@ def start_subtopic_quiz(
 )
 def start_topic_quiz(
     topic_id: int,
-    payload: QuizStartRequest = QuizStartRequest(),
+    payload: QuizStartRequest | None = None,
     user: User = Depends(require_no_active_mock),
     service: QuizService = Depends(get_quiz_service),
 ) -> QuizAttemptInProgressResponse:
@@ -110,7 +110,7 @@ def start_topic_quiz(
     return service.start_topic_quiz(
         user=user,
         topic_id=topic_id,
-        time_limit_seconds=payload.time_limit_seconds,
+        time_limit_seconds=payload.time_limit_seconds if payload else None,
     )
 
 
