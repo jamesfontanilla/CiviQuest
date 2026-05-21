@@ -75,6 +75,7 @@ from app.features.quizzes.schemas import (
     QuizAttemptInProgressResponse,
     QuizGradedQuestion,
     QuizSubmittedResponse,
+    QuizSummary,
 )
 from app.features.users.models import Category, User
 from app.features.xp.models import XPSource
@@ -651,10 +652,14 @@ class QuizService:
         is_passing = max_score > 0 and percentage >= PASS_THRESHOLD_PCT
 
         graded: list[QuizGradedQuestion] = []
+        correct_count = 0
+        incorrect_count = 0
+        unanswered_count = 0
         for a in answers:
             q = self._question_repo.get(a.question_id)
             if q is None:
                 continue
+            is_correct_flag = bool(a.is_correct) if a.is_correct is not None else False
             graded.append(
                 QuizGradedQuestion(
                     id=q.id,
@@ -662,10 +667,36 @@ class QuizService:
                     stem=q.stem,
                     selected_answer=a.selected_answer,
                     correct_answer=q.correct_answer,
-                    is_correct=bool(a.is_correct) if a.is_correct is not None else False,
+                    is_correct=is_correct_flag,
                     explanation=q.explanation,
                 )
             )
+            if a.selected_answer is None:
+                unanswered_count += 1
+            elif is_correct_flag:
+                correct_count += 1
+            else:
+                incorrect_count += 1
+
+        if is_perfect:
+            result_label = "Perfect"
+        elif is_passing:
+            result_label = "Passed"
+        else:
+            result_label = "Failed"
+
+        summary = QuizSummary(
+            total_questions=len(graded),
+            correct=correct_count,
+            incorrect=incorrect_count,
+            unanswered=unanswered_count,
+            score=score,
+            max_score=max_score,
+            percentage=percentage,
+            is_passing=is_passing,
+            is_perfect=is_perfect,
+            result_label=result_label,
+        )
 
         return QuizSubmittedResponse(
             attempt_id=attempt.id,
@@ -674,12 +705,14 @@ class QuizService:
             status=attempt.status,
             started_at=attempt.started_at,
             submitted_at=attempt.submitted_at,
+            time_limit_seconds=attempt.time_limit_seconds,
             score=score,
             max_score=max_score,
             percentage=percentage,
             is_perfect=is_perfect,
             is_passing=is_passing,
             awarded_xp=awarded_xp,
+            summary=summary,
             questions=graded,
         )
 

@@ -37,6 +37,7 @@ from app.features.quizzes.schemas import (
     QuizAttemptInProgressResponse,
     QuizGradedQuestion,
     QuizSubmittedResponse,
+    QuizSummary,
 )
 from app.features.quizzes.service import QuizService
 from app.features.users.models import AccountState, Category, Role, User
@@ -69,12 +70,14 @@ def _make_in_progress_response(scope: LevelScope, scope_id: int = 10):
         scope_id=scope_id,
         status="IN_PROGRESS",
         started_at=datetime(2025, 1, 1, tzinfo=timezone.utc),
+        time_limit_seconds=None,
         questions=[
             QuizAttemptInProgressQuestion(
                 id=1,
                 ordinal=1,
                 stem="Q?",
                 qtype="MULTIPLE_CHOICE",
+                difficulty="EASY",
                 options=["A", "B", "C", "D"],
                 selected_answer=None,
             )
@@ -91,12 +94,25 @@ def _make_submitted_response():
         status="SUBMITTED",
         started_at=datetime(2025, 1, 1, tzinfo=timezone.utc),
         submitted_at=datetime(2025, 1, 1, 0, 30, tzinfo=timezone.utc),
+        time_limit_seconds=None,
         score=18,
         max_score=20,
         percentage=0.9,
         is_perfect=False,
         is_passing=True,
         awarded_xp=20,
+        summary=QuizSummary(
+            total_questions=20,
+            correct=18,
+            incorrect=2,
+            unanswered=0,
+            score=18,
+            max_score=20,
+            percentage=0.9,
+            is_passing=True,
+            is_perfect=False,
+            result_label="Passed",
+        ),
         questions=[
             QuizGradedQuestion(
                 id=1,

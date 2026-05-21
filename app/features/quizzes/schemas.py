@@ -123,6 +123,41 @@ class QuizGradedQuestion(BaseModel):
     explanation: str
 
 
+class QuizSummary(BaseModel):
+    """Human-readable summary of a submitted quiz attempt.
+
+    Aggregates the graded result into a concise overview so clients
+    can render a results screen without re-deriving the numbers from
+    the raw ``questions`` list.
+
+    Fields:
+    - ``total_questions``: total number of questions in the attempt.
+    - ``correct``: number of questions answered correctly.
+    - ``incorrect``: number of questions answered incorrectly.
+    - ``unanswered``: number of questions left without a selection.
+    - ``score``: raw correct-answer count (mirrors the top-level field
+      for convenience).
+    - ``max_score``: maximum achievable score.
+    - ``percentage``: ``score / max_score`` as a value in ``[0, 1]``.
+    - ``is_passing``: ``True`` when ``percentage >= 0.80``.
+    - ``is_perfect``: ``True`` when every question was answered
+      correctly.
+    - ``result_label``: short display string — ``"Perfect"``,
+      ``"Passed"``, or ``"Failed"``.
+    """
+
+    total_questions: int
+    correct: int
+    incorrect: int
+    unanswered: int
+    score: int
+    max_score: int
+    percentage: float
+    is_passing: bool
+    is_perfect: bool
+    result_label: str
+
+
 class QuizSubmittedResponse(BaseModel):
     """Response shape for submit + GET-on-already-submitted reads."""
 
@@ -139,4 +174,5 @@ class QuizSubmittedResponse(BaseModel):
     is_perfect: bool
     is_passing: bool
     awarded_xp: int
+    summary: QuizSummary
     questions: list[QuizGradedQuestion]
