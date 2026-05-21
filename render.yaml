@@ -5,7 +5,13 @@ services:
     buildCommand: pip install -e .
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
+      - key: DATABASE_URL
+        sync: false  # Set manually in Render dashboard — Supabase session pooler URI
       - key: JWT_SECRET
         generateValue: true
+      - key: RESEND_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: EMAIL_FROM_ADDR
+        sync: false  # Set manually in Render dashboard
       - key: PYTHON_VERSION
         value: "3.11.9"

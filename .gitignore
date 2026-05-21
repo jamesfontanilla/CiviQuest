@@ -17,6 +17,7 @@ data/*.log
 data/exports/
 
 # Test / type / lint caches
+.hypothesis/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
