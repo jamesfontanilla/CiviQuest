@@ -10,7 +10,7 @@ import { useInView } from "../hooks/useInView";
 export function Home() {
   return (
     <PageTransition>
-      <main>
+      <main style={{ position: "relative", zIndex: 1 }}>
         {/* Hero with gradient */}
         <section
           style={{
