@@ -18,11 +18,12 @@ export function SubtopicList() {
   const [subtopics, setSubtopics] = useState<Subtopic[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     apiClient
       .get<Subtopic[]>(`/v1/topics/${topicId}/subtopics`)
       .then((res) => setSubtopics(res))
-      .catch((err) => setError(err.message))
+      .catch((err) => setError(err instanceof Error ? err.message : "Failed to load subtopics"))
       .finally(() => setLoading(false));
   }, [topicId]);
 

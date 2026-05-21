@@ -38,6 +38,7 @@ class QuizAttemptInProgressQuestion(BaseModel):
     ordinal: int
     stem: str
     qtype: QuestionType
+    difficulty: str
     # Per-attempt shuffled options for MULTIPLE_CHOICE; ``None`` for
     # free-text qtypes.
     options: list[str] | None
@@ -55,8 +56,34 @@ class QuizAttemptInProgressResponse(BaseModel):
     scope_id: int
     status: str  # "IN_PROGRESS"
     started_at: datetime
+    time_limit_seconds: int | None
     questions: list[QuizAttemptInProgressQuestion]
     total_questions: int
+
+
+# --- start-quiz request ----------------------------------------------------
+
+
+class QuizStartRequest(BaseModel):
+    """Optional body for start-quiz endpoints.
+
+    ``time_limit_seconds`` lets the client specify a countdown timer
+    for the attempt. Accepted values map to the three quiz modes:
+      - Practice: 1200 (20 min)
+      - Exam:      900 (15 min)
+      - Power:     600 (10 min)
+
+    ``None`` (or omitting the body entirely) means no timer — the
+    attempt runs until the learner submits manually.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    time_limit_seconds: int | None = Field(
+        default=None,
+        ge=60,       # minimum 1 minute — guards against accidental 0
+        le=3600,     # maximum 1 hour — sanity cap
+    )
 
 
 # --- answer PATCH request --------------------------------------------------
@@ -105,6 +132,7 @@ class QuizSubmittedResponse(BaseModel):
     status: str  # "SUBMITTED"
     started_at: datetime
     submitted_at: datetime
+    time_limit_seconds: int | None
     score: int
     max_score: int
     percentage: float

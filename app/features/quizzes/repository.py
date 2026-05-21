@@ -72,6 +72,7 @@ class QuizRepository(BaseRepository[QuizAttempt]):
         started_at: datetime,
         max_score: int,
         seed: int,
+        time_limit_seconds: int | None = None,
         client_event_id: str | None = None,
     ) -> QuizAttempt:
         """Insert a fresh ``IN_PROGRESS`` attempt row.
@@ -90,6 +91,7 @@ class QuizRepository(BaseRepository[QuizAttempt]):
             started_at=started_at,
             max_score=max_score,
             seed=seed,
+            time_limit_seconds=time_limit_seconds,
             client_event_id=client_event_id,
         )
         self.db.add(row)

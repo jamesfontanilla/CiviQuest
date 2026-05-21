@@ -7,11 +7,13 @@ Hierarchy created:
   Module: "Verbal Ability" (one per category)
     Topic: "Grammar and Correct Usage"
       Subtopic 1: "Subject-Verb Agreement"
-        Lesson: parsed from data/seed/lessons/.../subject-verb-agreement/lesson.md
-        Questions: loaded from data/seed/questions/.../subject-verb-agreement/questions.json
       Subtopic 2: "Verb Tenses"
-        Lesson: parsed from data/seed/lessons/.../verb-tenses/lesson.md
-        Questions: loaded from data/seed/questions/.../verb-tenses/questions.json
+      Subtopic 3: "Pronouns"
+      Subtopic 4: "Prepositions"
+      Subtopic 5: "Conjunctions"
+      Subtopic 6: "Modifiers"
+      Subtopic 7: "Parallelism"
+      Subtopic 8: "Articles"
 
 Usage:
     python -m scripts.seed_content
@@ -47,17 +49,24 @@ from app.infrastructure.database.base import Base
 
 SEED_BASE = Path(__file__).resolve().parent.parent / "data" / "seed"
 
-# Subtopic 1: Subject-Verb Agreement
-SVA_LESSON_PATH = SEED_BASE / "lessons" / "verbal-ability" / "grammar" / "subject-verb-agreement" / "lesson.md"
-SVA_QUESTIONS_PATH = SEED_BASE / "questions" / "verbal-ability" / "grammar" / "subject-verb-agreement" / "questions.json"
+GRAMMAR_LESSONS = SEED_BASE / "lessons" / "verbal-ability" / "grammar"
+GRAMMAR_QUESTIONS = SEED_BASE / "questions" / "verbal-ability" / "grammar"
 
-# Subtopic 2: Verb Tenses
-VT_LESSON_PATH = SEED_BASE / "lessons" / "verbal-ability" / "grammar" / "verb-tenses" / "lesson.md"
-VT_QUESTIONS_PATH = SEED_BASE / "questions" / "verbal-ability" / "grammar" / "verb-tenses" / "questions.json"
+# Ordered list of subtopics to seed (slug, title, folder_name)
+SUBTOPICS_CONFIG: list[tuple[str, str, str]] = [
+    ("subject-verb-agreement", "Subject-Verb Agreement", "subject-verb-agreement"),
+    ("verb-tenses", "Verb Tenses", "verb-tenses"),
+    ("pronouns", "Pronouns", "pronouns"),
+    ("prepositions", "Prepositions", "prepositions"),
+    ("conjunctions", "Conjunctions", "conjunctions"),
+    ("modifiers", "Modifiers", "modifiers"),
+    ("parallelism", "Parallelism", "parallelism"),
+    ("articles", "Articles", "articles"),
+]
 
 # Legacy aliases for backward compatibility
-LESSON_PATH = SVA_LESSON_PATH
-QUESTIONS_PATH = SVA_QUESTIONS_PATH
+LESSON_PATH = GRAMMAR_LESSONS / "subject-verb-agreement" / "lesson.md"
+QUESTIONS_PATH = GRAMMAR_QUESTIONS / "subject-verb-agreement" / "questions.json"
 
 
 # --- Markdown parser ---
@@ -163,9 +172,15 @@ def seed_content(session: Session) -> dict[str, Any]:
     and questions for all subtopics. Idempotent: skips if the module slug
     already exists.
 
-    Subtopics seeded:
-      1. Subject-Verb Agreement (500 questions)
-      2. Verb Tenses (500 questions)
+    Subtopics seeded (in order):
+      1. Subject-Verb Agreement
+      2. Verb Tenses
+      3. Pronouns
+      4. Prepositions
+      5. Conjunctions
+      6. Modifiers
+      7. Parallelism
+      8. Articles
     """
     results: dict[str, Any] = {"modules": [], "questions_loaded": 0}
 
@@ -176,43 +191,28 @@ def seed_content(session: Session) -> dict[str, Any]:
     if existing is not None:
         return {"status": "already_seeded", "module_id": existing.id}
 
-    # Load source files — Subtopic 1: Subject-Verb Agreement
-    if not SVA_LESSON_PATH.exists():
-        raise FileNotFoundError(f"Lesson file not found: {SVA_LESSON_PATH}")
-    if not SVA_QUESTIONS_PATH.exists():
-        raise FileNotFoundError(f"Questions file not found: {SVA_QUESTIONS_PATH}")
+    # Load all subtopics from config
+    subtopics_data: list[dict[str, Any]] = []
+    for order_idx, (slug, title, folder) in enumerate(SUBTOPICS_CONFIG, start=1):
+        lesson_path = GRAMMAR_LESSONS / folder / "lesson.md"
+        questions_path = GRAMMAR_QUESTIONS / folder / "questions.json"
 
-    sva_lesson_md = SVA_LESSON_PATH.read_text(encoding="utf-8")
-    sva_lesson_content = parse_lesson_markdown(sva_lesson_md)
-    sva_questions_raw = json.loads(SVA_QUESTIONS_PATH.read_text(encoding="utf-8"))
+        if not lesson_path.exists():
+            raise FileNotFoundError(f"Lesson file not found: {lesson_path}")
+        if not questions_path.exists():
+            raise FileNotFoundError(f"Questions file not found: {questions_path}")
 
-    # Load source files — Subtopic 2: Verb Tenses
-    if not VT_LESSON_PATH.exists():
-        raise FileNotFoundError(f"Lesson file not found: {VT_LESSON_PATH}")
-    if not VT_QUESTIONS_PATH.exists():
-        raise FileNotFoundError(f"Questions file not found: {VT_QUESTIONS_PATH}")
+        lesson_md = lesson_path.read_text(encoding="utf-8")
+        lesson_content = parse_lesson_markdown(lesson_md)
+        questions_raw = json.loads(questions_path.read_text(encoding="utf-8"))
 
-    vt_lesson_md = VT_LESSON_PATH.read_text(encoding="utf-8")
-    vt_lesson_content = parse_lesson_markdown(vt_lesson_md)
-    vt_questions_raw = json.loads(VT_QUESTIONS_PATH.read_text(encoding="utf-8"))
-
-    # Define subtopics to seed
-    subtopics_data = [
-        {
-            "slug": "subject-verb-agreement",
-            "title": "Subject-Verb Agreement",
-            "order_index": 1,
-            "lesson_content": sva_lesson_content,
-            "questions": sva_questions_raw,
-        },
-        {
-            "slug": "verb-tenses",
-            "title": "Verb Tenses",
-            "order_index": 2,
-            "lesson_content": vt_lesson_content,
-            "questions": vt_questions_raw,
-        },
-    ]
+        subtopics_data.append({
+            "slug": slug,
+            "title": title,
+            "order_index": order_idx,
+            "lesson_content": lesson_content,
+            "questions": questions_raw,
+        })
 
     # Create hierarchy for BOTH categories
     for cat_key, cat_value in [

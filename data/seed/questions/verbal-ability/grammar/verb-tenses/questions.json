@@ -19,7 +19,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -42,7 +45,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -65,7 +71,10 @@
       "plural subject",
       "habitual action"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -88,7 +97,10 @@
       "general truth",
       "scientific fact"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -111,7 +123,10 @@
       "general truth",
       "nature"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -134,7 +149,10 @@
       "action in progress",
       "signal word"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -157,7 +175,10 @@
       "action in progress",
       "signal word"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -180,7 +201,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -203,7 +227,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -226,7 +253,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -249,7 +279,10 @@
       "already",
       "irregular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -272,7 +305,10 @@
       "life experience",
       "never"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -295,7 +331,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -318,7 +357,10 @@
       "scheduled event",
       "future timetable"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -341,7 +383,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -364,7 +409,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -387,7 +435,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -410,7 +461,10 @@
       "action in progress",
       "signal word"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -433,7 +487,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -456,7 +513,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -479,7 +539,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -502,7 +565,10 @@
       "general truth",
       "plural subject"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -525,7 +591,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -548,7 +617,10 @@
       "action in progress",
       "signal word"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -571,7 +643,10 @@
       "general truth",
       "singular subject"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -594,7 +669,10 @@
       "scheduled event",
       "habitual action"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -617,7 +695,10 @@
       "action in progress",
       "first person"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -640,7 +721,10 @@
       "habitual action",
       "plural subject"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -663,7 +747,10 @@
       "specific past time",
       "ago"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -686,7 +773,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -709,7 +799,10 @@
       "habitual action",
       "spelling rule"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -732,7 +825,10 @@
       "specific past time",
       "spelling rule"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -755,7 +851,10 @@
       "already",
       "irregular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -778,7 +877,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -801,7 +903,10 @@
       "life experience",
       "unspecified time"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -824,7 +929,10 @@
       "scheduled event",
       "future timetable"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -847,7 +955,10 @@
       "temporary action",
       "signal word"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -870,7 +981,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -893,7 +1007,10 @@
       "permanent state",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -916,7 +1033,10 @@
       "irregular verb",
       "ago"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -939,7 +1059,10 @@
       "life experience",
       "never"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -962,7 +1085,10 @@
       "scheduled event",
       "future timetable"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -985,7 +1111,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1008,7 +1137,10 @@
       "general truth",
       "scientific fact"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1031,7 +1163,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1054,7 +1189,10 @@
       "just",
       "recently completed"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1077,7 +1215,10 @@
       "habitual action",
       "plural subject"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1100,7 +1241,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1123,7 +1267,10 @@
       "uncountable noun",
       "singular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1146,7 +1293,10 @@
       "action in progress",
       "signal word"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1169,7 +1319,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1192,7 +1345,10 @@
       "since",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1215,7 +1371,10 @@
       "stative verb",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1238,7 +1397,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1261,7 +1423,10 @@
       "stative verb",
       "negative"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1284,7 +1449,10 @@
       "plural subject",
       "stative verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1307,7 +1475,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1330,7 +1501,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1353,7 +1527,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1376,7 +1553,10 @@
       "current state",
       "third person singular"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1399,7 +1579,10 @@
       "irregular verb",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1422,7 +1605,10 @@
       "singular noun",
       "special case"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1445,7 +1631,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1468,7 +1657,10 @@
       "sequence",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1491,7 +1683,10 @@
       "life experience",
       "ever"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1514,7 +1709,10 @@
       "scheduled event",
       "habitual action"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1537,7 +1735,10 @@
       "temporary action",
       "future plan"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1560,7 +1761,10 @@
       "habitual action",
       "plural subject"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1583,7 +1787,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1606,7 +1813,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1629,7 +1839,10 @@
       "since",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1652,7 +1865,10 @@
       "interrupted action",
       "while"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1675,7 +1891,10 @@
       "by the time",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1698,7 +1917,10 @@
       "since",
       "ongoing period"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1721,7 +1943,10 @@
       "specific future time",
       "in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1744,7 +1969,10 @@
       "duration before past event",
       "before"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1767,7 +1995,10 @@
       "backshift",
       "past tense"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1790,7 +2021,10 @@
       "future possibility",
       "if clause"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1813,7 +2047,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1836,7 +2073,10 @@
       "by future time",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1859,7 +2099,10 @@
       "duration",
       "all morning"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1882,7 +2125,10 @@
       "background action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1905,7 +2151,10 @@
       "so far",
       "ongoing period"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1928,7 +2177,10 @@
       "past perfect",
       "backshift"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1951,7 +2203,10 @@
       "unreal present",
       "if clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1974,7 +2229,10 @@
       "since",
       "change over time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -1997,7 +2255,10 @@
       "cause of past state",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2020,7 +2281,10 @@
       "already",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2043,7 +2307,10 @@
       "by future time",
       "completion"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2066,7 +2333,10 @@
       "simultaneous actions",
       "while"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2089,7 +2359,10 @@
       "sequence",
       "irregular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2112,7 +2385,10 @@
       "general truth",
       "no backshift"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2135,7 +2411,10 @@
       "for",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2158,7 +2437,10 @@
       "backshift",
       "past tense"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2181,7 +2463,10 @@
       "by future time",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2204,7 +2489,10 @@
       "earlier past",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2227,7 +2515,10 @@
       "passive voice",
       "since"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2250,7 +2541,10 @@
       "time clause",
       "as soon as"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2273,7 +2567,10 @@
       "until",
       "duration before past event"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2296,7 +2593,10 @@
       "habitual action",
       "every time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2319,7 +2619,10 @@
       "earlier past",
       "passive voice"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2342,7 +2645,10 @@
       "for",
       "still ongoing"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2365,7 +2671,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2388,7 +2697,10 @@
       "this quarter",
       "completed quantity"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2411,7 +2723,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2434,7 +2749,10 @@
       "backshift",
       "would"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2457,7 +2775,10 @@
       "since",
       "repeated action"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2480,7 +2801,10 @@
       "real future",
       "if clause"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2503,7 +2827,10 @@
       "this week",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2526,7 +2853,10 @@
       "after",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2549,7 +2879,10 @@
       "specific future time",
       "in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2572,7 +2905,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2595,7 +2931,10 @@
       "since",
       "still ongoing"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2618,7 +2957,10 @@
       "backshift",
       "would"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2641,7 +2983,10 @@
       "today",
       "completed quantity"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2664,7 +3009,10 @@
       "passive voice",
       "since"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2687,7 +3035,10 @@
       "past habit",
       "discontinued action"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2710,7 +3061,10 @@
       "present simple",
       "once"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2733,7 +3087,10 @@
       "cause of past state",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2756,7 +3113,10 @@
       "promise",
       "time clause"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2779,7 +3139,10 @@
       "duration before past event",
       "before"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2802,7 +3165,10 @@
       "by future time",
       "deadline"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2825,7 +3191,10 @@
       "past period",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2848,7 +3217,10 @@
       "yet",
       "negative"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2871,7 +3243,10 @@
       "before",
       "passive voice"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2894,7 +3269,10 @@
       "action in progress",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2917,7 +3295,10 @@
       "by the time",
       "future deadline"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2940,7 +3321,10 @@
       "this month",
       "completed quantity"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2963,7 +3347,10 @@
       "past perfect",
       "testimony"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -2986,7 +3373,10 @@
       "for",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3009,7 +3399,10 @@
       "scientific fact",
       "general truth"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3032,7 +3425,10 @@
       "since",
       "still ongoing"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3055,7 +3451,10 @@
       "for",
       "repeated action"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3078,7 +3477,10 @@
       "specific future time",
       "scheduled"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3101,7 +3503,10 @@
       "until",
       "earlier state"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3124,7 +3529,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3147,7 +3555,10 @@
       "life experience",
       "many times"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3170,7 +3581,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3193,7 +3607,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3216,7 +3633,10 @@
       "action in progress",
       "right now"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3239,7 +3659,10 @@
       "by future time",
       "completion"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3262,7 +3685,10 @@
       "past perfect",
       "denial"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3285,7 +3711,10 @@
       "for",
       "still ongoing"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3308,7 +3737,10 @@
       "by the time",
       "future reference"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3331,7 +3763,10 @@
       "since",
       "long duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3354,7 +3789,10 @@
       "backshift",
       "past tense"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3377,7 +3815,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3400,7 +3841,10 @@
       "over the past",
       "change"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3423,7 +3867,10 @@
       "unreal present",
       "would"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3446,7 +3893,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3469,7 +3919,10 @@
       "this semester",
       "completed quantity"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3492,7 +3945,10 @@
       "by the time",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3515,7 +3971,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3538,7 +3997,10 @@
       "background action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3561,7 +4023,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3584,7 +4049,10 @@
       "since",
       "ongoing"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3607,7 +4075,10 @@
       "already",
       "irregular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3630,7 +4101,10 @@
       "real future",
       "if clause"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3653,7 +4127,10 @@
       "for",
       "now"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3676,7 +4153,10 @@
       "past perfect",
       "backshift"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3699,7 +4179,10 @@
       "all day yesterday",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3722,7 +4205,10 @@
       "by the time",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3745,7 +4231,10 @@
       "when",
       "interrupted action"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3768,7 +4257,10 @@
       "since",
       "multiple actions"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3791,7 +4283,10 @@
       "past perfect",
       "regret"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3814,7 +4309,10 @@
       "before future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3837,7 +4335,10 @@
       "for",
       "present result"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3860,7 +4361,10 @@
       "habitual state",
       "every"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3883,7 +4387,10 @@
       "after",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3906,7 +4413,10 @@
       "for the past",
       "ongoing trend"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3929,7 +4439,10 @@
       "past perfect",
       "whether"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3952,7 +4465,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3975,7 +4491,10 @@
       "lately",
       "recent habit"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -3998,7 +4517,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4021,7 +4543,10 @@
       "this week",
       "completed quantity"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4044,7 +4569,10 @@
       "by the time",
       "future reference"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4067,7 +4595,10 @@
       "real future",
       "if clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4090,7 +4621,10 @@
       "for weeks",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4113,7 +4647,10 @@
       "life experience",
       "negative"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4136,7 +4673,10 @@
       "habitual action",
       "every"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4159,7 +4699,10 @@
       "by future time",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4182,7 +4725,10 @@
       "present consequence",
       "result"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4205,7 +4751,10 @@
       "passive voice",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4228,7 +4777,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4251,7 +4803,10 @@
       "by the time",
       "deadline"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4274,7 +4829,10 @@
       "future plan",
       "intention"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4297,7 +4855,10 @@
       "past perfect",
       "confirmed"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4320,7 +4881,10 @@
       "future time",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4343,7 +4907,10 @@
       "since",
       "still ongoing"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4366,7 +4933,10 @@
       "if clause",
       "present simple"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4389,7 +4959,10 @@
       "before",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4412,7 +4985,10 @@
       "present result",
       "completed action"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4435,7 +5011,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4458,7 +5037,10 @@
       "schedule",
       "third person singular"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4481,7 +5063,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4504,7 +5089,10 @@
       "future plan",
       "arranged"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4527,7 +5115,10 @@
       "by the time",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4550,7 +5141,10 @@
       "recently",
       "ongoing thought"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4573,7 +5167,10 @@
       "by future time",
       "target"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4596,7 +5193,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4619,7 +5219,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4642,7 +5245,10 @@
       "throughout",
       "accumulated"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4665,7 +5271,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4688,7 +5297,10 @@
       "before future time",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4711,7 +5323,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4734,7 +5349,10 @@
       "present relevance",
       "completed"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4757,7 +5375,10 @@
       "unreal past",
       "would have"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4780,7 +5401,10 @@
       "scheduled event",
       "timetable"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4803,7 +5427,10 @@
       "since",
       "ongoing ability"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4826,7 +5453,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4849,7 +5479,10 @@
       "inversion",
       "past participle"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4872,7 +5505,10 @@
       "not until",
       "inversion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4895,7 +5531,10 @@
       "duration",
       "relative clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4918,7 +5557,10 @@
       "imperative",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4941,7 +5583,10 @@
       "insisted",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4964,7 +5609,10 @@
       "hardly",
       "past perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -4987,7 +5635,10 @@
       "no sooner",
       "past perfect"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5010,7 +5661,10 @@
       "by the time",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5033,7 +5687,10 @@
       "recommended",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5056,7 +5713,10 @@
       "inversion",
       "were"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5079,7 +5739,10 @@
       "requires",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5102,7 +5765,10 @@
       "as though",
       "unreal present"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5125,7 +5791,10 @@
       "past condition",
       "present result"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5148,7 +5817,10 @@
       "scarcely",
       "past perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5171,7 +5843,10 @@
       "essential",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5194,7 +5869,10 @@
       "suggests",
       "present tense"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5217,7 +5895,10 @@
       "inversion",
       "past participle"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5240,7 +5921,10 @@
       "proposed",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5263,7 +5947,10 @@
       "by the time",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5286,7 +5973,10 @@
       "unreal present",
       "past subjunctive"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5309,7 +5999,10 @@
       "demanded",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5332,7 +6025,10 @@
       "only after",
       "inversion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5355,7 +6051,10 @@
       "subjunctive",
       "past simple"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5378,7 +6077,10 @@
       "subjunctive",
       "past simple"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5401,7 +6103,10 @@
       "suggested",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5424,7 +6129,10 @@
       "inversion",
       "passive"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5447,7 +6155,10 @@
       "not only",
       "past perfect"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5470,7 +6181,10 @@
       "unreal past",
       "had been"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5493,7 +6207,10 @@
       "stipulates",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5516,7 +6233,10 @@
       "past perfect",
       "earlier action"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5539,7 +6259,10 @@
       "little",
       "simple past"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5562,7 +6285,10 @@
       "moved that",
       "formal"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5585,7 +6311,10 @@
       "were to",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5608,7 +6337,10 @@
       "by the time",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5631,7 +6363,10 @@
       "vital",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5654,7 +6389,10 @@
       "past perfect",
       "regret"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5677,7 +6415,10 @@
       "seldom",
       "present perfect"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5700,7 +6441,10 @@
       "ordered",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5723,7 +6467,10 @@
       "past condition",
       "present result"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5746,7 +6493,10 @@
       "never before",
       "present perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5769,7 +6519,10 @@
       "proposed",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5792,7 +6545,10 @@
       "subjunctive",
       "unreal present"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5815,7 +6571,10 @@
       "inversion",
       "passive"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5838,7 +6597,10 @@
       "demanded",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5861,7 +6623,10 @@
       "only when",
       "simple past"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5884,7 +6649,10 @@
       "necessary",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5907,7 +6675,10 @@
       "past perfect",
       "regret"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5930,7 +6701,10 @@
       "rarely",
       "present perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5953,7 +6727,10 @@
       "mandates",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5976,7 +6753,10 @@
       "past condition",
       "present result"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -5999,7 +6779,10 @@
       "recommended",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6022,7 +6805,10 @@
       "not once",
       "present perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6045,7 +6831,10 @@
       "unreal present",
       "past simple"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6068,7 +6857,10 @@
       "crucial",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6091,7 +6883,10 @@
       "inversion",
       "past participle"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6114,7 +6909,10 @@
       "urged",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6137,7 +6935,10 @@
       "under no circumstances",
       "present tense"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6160,7 +6961,10 @@
       "past perfect",
       "unreal past"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6183,7 +6987,10 @@
       "requires",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6206,7 +7013,10 @@
       "past condition",
       "present result"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6229,7 +7039,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6252,7 +7065,10 @@
       "for",
       "now"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6275,7 +7091,10 @@
       "backshift",
       "would"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6298,7 +7117,10 @@
       "before",
       "repeated past action"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6321,7 +7143,10 @@
       "general truth",
       "present state"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6344,7 +7169,10 @@
       "by today",
       "deadline"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6367,7 +7195,10 @@
       "since",
       "ongoing"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6390,7 +7221,10 @@
       "already",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6413,7 +7247,10 @@
       "real future",
       "if clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6436,7 +7273,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6459,7 +7299,10 @@
       "present result",
       "just completed"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6482,7 +7325,10 @@
       "specific future time",
       "in progress"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6505,7 +7351,10 @@
       "since",
       "accumulated experience"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6528,7 +7377,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6551,7 +7403,10 @@
       "habitual action",
       "every year"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6574,7 +7429,10 @@
       "for months",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6597,7 +7455,10 @@
       "completed",
       "present relevance"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6620,7 +7481,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6643,7 +7507,10 @@
       "for the past",
       "habitual"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6666,7 +7533,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6689,7 +7559,10 @@
       "demands",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6712,7 +7585,10 @@
       "only after",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6735,7 +7611,10 @@
       "inversion",
       "would"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6758,7 +7637,10 @@
       "insisted",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6781,7 +7663,10 @@
       "at no point",
       "simple past"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6804,7 +7689,10 @@
       "subjunctive",
       "unreal present"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6827,7 +7715,10 @@
       "subjunctive",
       "past simple"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6850,7 +7741,10 @@
       "inversion",
       "should"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6873,7 +7767,10 @@
       "before",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6896,7 +7793,10 @@
       "requested",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6919,7 +7819,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6942,7 +7845,10 @@
       "over the past",
       "improvement"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6965,7 +7871,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -6988,7 +7897,10 @@
       "by future time",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7011,7 +7923,10 @@
       "all week",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7034,7 +7949,10 @@
       "habitual action",
       "every"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7057,7 +7975,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7080,7 +8001,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7103,7 +8027,10 @@
       "recent action",
       "present evidence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7126,7 +8053,10 @@
       "while",
       "in progress"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7149,7 +8079,10 @@
       "by the time",
       "future reference"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7172,7 +8105,10 @@
       "general truth",
       "policy"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7195,7 +8131,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7218,7 +8157,10 @@
       "since",
       "ongoing"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7241,7 +8183,10 @@
       "past perfect",
       "backshift"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7264,7 +8209,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7287,7 +8235,10 @@
       "time clause",
       "as soon as"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7310,7 +8261,10 @@
       "since",
       "improvement"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7333,7 +8287,10 @@
       "sequence",
       "narrative"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7356,7 +8313,10 @@
       "for",
       "long duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7379,7 +8339,10 @@
       "desirable",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7402,7 +8365,10 @@
       "nowhere",
       "present tense"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7425,7 +8391,10 @@
       "base form",
       "parallel structure"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7448,7 +8417,10 @@
       "prior to",
       "passive voice"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7471,7 +8443,10 @@
       "unreal past",
       "had chosen"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7494,7 +8469,10 @@
       "moved that",
       "formal"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7517,7 +8495,10 @@
       "in no way",
       "present tense"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7540,7 +8521,10 @@
       "past perfect continuous",
       "appearance"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7563,7 +8547,10 @@
       "shall",
       "constitution"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7586,7 +8573,10 @@
       "inversion",
       "passive"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7609,7 +8599,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7632,7 +8625,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7655,7 +8651,10 @@
       "scheduled event",
       "habitual"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7678,7 +8677,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7701,7 +8703,10 @@
       "habitual action",
       "plural subject"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7724,7 +8729,10 @@
       "at the moment",
       "action in progress"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7747,7 +8755,10 @@
       "scheduled event",
       "timetable"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7770,7 +8781,10 @@
       "irregular verb",
       "ago"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7793,7 +8807,10 @@
       "never",
       "life experience"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7816,7 +8833,10 @@
       "irregular verb",
       "ago"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7839,7 +8859,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7862,7 +8885,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7885,7 +8911,10 @@
       "completed action",
       "regular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7908,7 +8937,10 @@
       "stative verb",
       "third person singular"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7931,7 +8963,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7954,7 +8989,10 @@
       "sequence",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -7977,7 +9015,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8000,7 +9041,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8023,7 +9067,10 @@
       "stative verb",
       "first person"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8046,7 +9093,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8069,7 +9119,10 @@
       "general ability",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8092,7 +9145,10 @@
       "specific past time",
       "irregular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8115,7 +9171,10 @@
       "right now",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8138,7 +9197,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8161,7 +9223,10 @@
       "happening now",
       "weather"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8184,7 +9249,10 @@
       "in five years",
       "achievement"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8207,7 +9275,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8230,7 +9301,10 @@
       "by future time",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8253,7 +9327,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8276,7 +9353,10 @@
       "all morning",
       "visible result"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8299,7 +9379,10 @@
       "if clause",
       "present simple"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8322,7 +9405,10 @@
       "for",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8345,7 +9431,10 @@
       "by the time",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8368,7 +9457,10 @@
       "passive",
       "since"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8391,7 +9483,10 @@
       "current intention",
       "hoping"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8414,7 +9509,10 @@
       "past perfect",
       "backshift"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8437,7 +9535,10 @@
       "this time next year",
       "in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8460,7 +9561,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8483,7 +9587,10 @@
       "since",
       "accumulated"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8506,7 +9613,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8529,7 +9639,10 @@
       "ruled",
       "past tense"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8552,7 +9665,10 @@
       "were to",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8575,7 +9691,10 @@
       "only by",
       "modal"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8598,7 +9717,10 @@
       "demanded",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8621,7 +9743,10 @@
       "not until",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8644,7 +9769,10 @@
       "specifies",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8667,7 +9795,10 @@
       "were",
       "unreal present"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8690,7 +9821,10 @@
       "barely",
       "past perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8713,7 +9847,10 @@
       "resolved",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8736,7 +9873,10 @@
       "past simple",
       "unreal present"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8759,7 +9899,10 @@
       "habitual action",
       "every night"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8782,7 +9925,10 @@
       "by the time",
       "deadline"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8805,7 +9951,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8828,7 +9977,10 @@
       "since",
       "accumulated"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8851,7 +10003,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8874,7 +10029,10 @@
       "for",
       "now"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8897,7 +10055,10 @@
       "past perfect",
       "backshift"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8920,7 +10081,10 @@
       "for",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8943,7 +10107,10 @@
       "permanent ability",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8966,7 +10133,10 @@
       "by next week",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -8989,7 +10159,10 @@
       "stipulated",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9012,7 +10185,10 @@
       "so...that",
       "past tense"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9035,7 +10211,10 @@
       "were",
       "unreal present"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9058,7 +10237,10 @@
       "suggested",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9081,7 +10263,10 @@
       "inversion",
       "past participle"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9104,7 +10289,10 @@
       "on no account",
       "shall"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9127,7 +10315,10 @@
       "past perfect",
       "unreal past"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9150,7 +10341,10 @@
       "dictates",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9173,7 +10367,10 @@
       "unreal past",
       "past perfect"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9196,7 +10393,10 @@
       "mandates",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9219,7 +10419,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9242,7 +10445,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9265,7 +10471,10 @@
       "at the moment",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9288,7 +10497,10 @@
       "habitual action",
       "frequency"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9311,7 +10523,10 @@
       "future time",
       "will"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9334,7 +10549,10 @@
       "before",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9357,7 +10575,10 @@
       "for months",
       "before past event"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9380,7 +10601,10 @@
       "by the time",
       "future reference"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9403,7 +10627,10 @@
       "this year",
       "completed quantity"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9426,7 +10653,10 @@
       "simultaneous actions",
       "while"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9449,7 +10679,10 @@
       "this month",
       "completed quantity"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9472,7 +10705,10 @@
       "requirement",
       "subjunctive complement"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9495,7 +10731,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9518,7 +10757,10 @@
       "for",
       "still ongoing"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9541,7 +10783,10 @@
       "general truth",
       "media"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9564,7 +10809,10 @@
       "important",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9587,7 +10835,10 @@
       "only after",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9610,7 +10861,10 @@
       "inversion",
       "were it not for"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9633,7 +10887,10 @@
       "insisted",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9656,7 +10913,10 @@
       "unreal comparison",
       "were"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9679,7 +10939,10 @@
       "habitual action",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9702,7 +10965,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9725,7 +10991,10 @@
       "now",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9748,7 +11017,10 @@
       "general truth",
       "geography"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9771,7 +11043,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9794,7 +11069,10 @@
       "since",
       "growth"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9817,7 +11095,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9840,7 +11121,10 @@
       "by Friday",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9863,7 +11147,10 @@
       "for",
       "before past event"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9886,7 +11173,10 @@
       "if clause",
       "present simple"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9909,7 +11199,10 @@
       "all week",
       "duration"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9932,7 +11225,10 @@
       "today",
       "completed quantity"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9955,7 +11251,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -9978,7 +11277,10 @@
       "past perfect",
       "backshift"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10001,7 +11303,10 @@
       "for",
       "now"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10024,7 +11329,10 @@
       "recommended",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10047,7 +11355,10 @@
       "inversion",
       "past participle"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10070,7 +11381,10 @@
       "subjunctive",
       "past simple"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10093,7 +11407,10 @@
       "subjunctive",
       "were"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10116,7 +11433,10 @@
       "nowhere else",
       "present tense"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10139,7 +11459,10 @@
       "general truth",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10162,7 +11485,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10185,7 +11511,10 @@
       "right now",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10208,7 +11537,10 @@
       "irregular verb",
       "ago"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10231,7 +11563,10 @@
       "stative verb",
       "permanent state"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10254,7 +11589,10 @@
       "since",
       "still ongoing"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10277,7 +11615,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10300,7 +11641,10 @@
       "by end of day",
       "target"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10323,7 +11667,10 @@
       "for",
       "ongoing possession"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10346,7 +11693,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10369,7 +11719,10 @@
       "during career",
       "accumulated"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10392,7 +11745,10 @@
       "interrupted action",
       "when"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10415,7 +11771,10 @@
       "before",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10438,7 +11797,10 @@
       "over the last",
       "change"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10461,7 +11823,10 @@
       "real future",
       "if clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10484,7 +11849,10 @@
       "resolved",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10507,7 +11875,10 @@
       "not only",
       "simple past"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10530,7 +11901,10 @@
       "were",
       "unreal present"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10553,7 +11927,10 @@
       "requires",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10576,7 +11953,10 @@
       "past perfect",
       "earlier experience"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10599,7 +11979,10 @@
       "schedule",
       "third person singular"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10622,7 +12005,10 @@
       "specific past time",
       "irregular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10645,7 +12031,10 @@
       "habitual action",
       "frequency"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10668,7 +12057,10 @@
       "irregular verb",
       "specific past time"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10691,7 +12083,10 @@
       "life experience",
       "before"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10714,7 +12109,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10737,7 +12135,10 @@
       "by the time",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10760,7 +12161,10 @@
       "future time",
       "duration"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10783,7 +12187,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10806,7 +12213,10 @@
       "permanent ability",
       "third person singular"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10829,7 +12239,10 @@
       "by the time",
       "sequence"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10852,7 +12265,10 @@
       "ongoing effort",
       "since past"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10875,7 +12291,10 @@
       "shall",
       "provision"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10898,7 +12317,10 @@
       "inversion",
       "passive"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10921,7 +12343,10 @@
       "subjunctive",
       "unreal present"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10944,7 +12369,10 @@
       "proposed",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10967,7 +12395,10 @@
       "only when",
       "time clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -10990,7 +12421,10 @@
       "duration",
       "completed"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11013,7 +12447,10 @@
       "habitual action",
       "always"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11036,7 +12473,10 @@
       "future time",
       "will"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11059,7 +12499,10 @@
       "past context",
       "regular verb"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11082,7 +12525,10 @@
       "scientific fact",
       "general truth"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11105,7 +12551,10 @@
       "since",
       "ongoing"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11128,7 +12577,10 @@
       "before",
       "sequence"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11151,7 +12603,10 @@
       "by future time",
       "accumulation"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11174,7 +12629,10 @@
       "all night",
       "before past event"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11197,7 +12655,10 @@
       "real future",
       "if clause"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11220,7 +12681,10 @@
       "requires",
       "base form"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11243,7 +12707,10 @@
       "were to",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11266,7 +12733,10 @@
       "not since",
       "present perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11289,7 +12759,10 @@
       "ordered",
       "base form"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11312,7 +12785,10 @@
       "unreal past",
       "past perfect"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11335,7 +12811,10 @@
       "habitual action",
       "every Sunday"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11358,7 +12837,10 @@
       "specific past time",
       "regular verb"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11381,7 +12863,10 @@
       "look",
       "action in progress"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11404,7 +12889,10 @@
       "by the time",
       "completion"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11427,7 +12915,10 @@
       "for",
       "before past event"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11450,7 +12941,10 @@
       "when",
       "action in progress"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11473,7 +12967,10 @@
       "shall",
       "stipulates"
     ],
-    "category": "Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   },
   {
@@ -11496,7 +12993,10 @@
       "inversion",
       "past participle"
     ],
-    "category": "Sub-Professional",
+    "category": [
+      "Professional",
+      "Sub-Professional"
+    ],
     "language": "English"
   }
 ]

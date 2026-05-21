@@ -37,6 +37,7 @@ from app.features.quizzes.repository import QuizRepository
 from app.features.quizzes.schemas import (
     QuizAnswerPatchRequest,
     QuizAttemptInProgressResponse,
+    QuizStartRequest,
     QuizSubmittedResponse,
 )
 from app.features.quizzes.service import QuizService
@@ -77,11 +78,21 @@ def get_quiz_service(db: Session = Depends(get_db)) -> QuizService:
 )
 def start_subtopic_quiz(
     subtopic_id: int,
+    payload: QuizStartRequest = QuizStartRequest(),
     user: User = Depends(require_no_active_mock),
     service: QuizService = Depends(get_quiz_service),
 ) -> QuizAttemptInProgressResponse:
-    """Start a 20-question subtopic quiz (Req 7.1, 6.1)."""
-    return service.start_subtopic_quiz(user=user, subtopic_id=subtopic_id)
+    """Start a 20-question subtopic quiz (Req 7.1, 6.1).
+
+    Accepts an optional ``QuizStartRequest`` body to set a countdown
+    timer (practice=1200s, exam=900s, power=600s). Omitting the body
+    or sending ``{"time_limit_seconds": null}`` starts with no timer.
+    """
+    return service.start_subtopic_quiz(
+        user=user,
+        subtopic_id=subtopic_id,
+        time_limit_seconds=payload.time_limit_seconds,
+    )
 
 
 @router.post(
@@ -91,11 +102,16 @@ def start_subtopic_quiz(
 )
 def start_topic_quiz(
     topic_id: int,
+    payload: QuizStartRequest = QuizStartRequest(),
     user: User = Depends(require_no_active_mock),
     service: QuizService = Depends(get_quiz_service),
 ) -> QuizAttemptInProgressResponse:
     """Start a 50-question topic quiz (Req 8.1, 8.2)."""
-    return service.start_topic_quiz(user=user, topic_id=topic_id)
+    return service.start_topic_quiz(
+        user=user,
+        topic_id=topic_id,
+        time_limit_seconds=payload.time_limit_seconds,
+    )
 
 
 @router.post(

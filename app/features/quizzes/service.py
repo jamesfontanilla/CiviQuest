@@ -134,6 +134,7 @@ class QuizService:
         *,
         user: User,
         subtopic_id: int,
+        time_limit_seconds: int | None = None,
         now: datetime | None = None,
     ) -> QuizAttemptInProgressResponse:
         """Assemble + persist a 20-question subtopic quiz (Req 7.1, 6.1).
@@ -180,6 +181,7 @@ class QuizService:
             chosen=chosen,
             seed=seed,
             started_at=when,
+            time_limit_seconds=time_limit_seconds,
         )
 
     def start_topic_quiz(
@@ -187,6 +189,7 @@ class QuizService:
         *,
         user: User,
         topic_id: int,
+        time_limit_seconds: int | None = None,
         now: datetime | None = None,
     ) -> QuizAttemptInProgressResponse:
         """Assemble + persist a 50-question topic quiz (Req 8.1, 8.2).
@@ -544,6 +547,16 @@ class QuizService:
         chosen: list[Question],
         seed: int,
         started_at: datetime,
+    def _persist_assembled_attempt(
+        self,
+        *,
+        user: User,
+        scope_level: LevelScope,
+        scope_id: int,
+        chosen: list[Question],
+        seed: int,
+        started_at: datetime,
+        time_limit_seconds: int | None = None,
     ) -> QuizAttemptInProgressResponse:
         """Persist attempt + answer rows; return the in-progress shape.
 
@@ -560,6 +573,7 @@ class QuizService:
             started_at=started_at,
             max_score=len(chosen),
             seed=seed,
+            time_limit_seconds=time_limit_seconds,
         )
 
         rows = []
@@ -611,6 +625,7 @@ class QuizService:
                     qtype=QuestionType(q.qtype),
                     options=options,
                     selected_answer=a.selected_answer,
+                    difficulty=q.difficulty,
                 )
             )
         return QuizAttemptInProgressResponse(
@@ -619,6 +634,7 @@ class QuizService:
             scope_id=attempt.scope_id,
             status=attempt.status,
             started_at=attempt.started_at,
+            time_limit_seconds=attempt.time_limit_seconds,
             questions=questions,
             total_questions=attempt.max_score,
         )

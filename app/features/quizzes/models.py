@@ -124,6 +124,10 @@ class QuizAttempt(Base):
     # (Req 21). ``BigInteger`` because ``rng.randbits(64)`` returns
     # values up to 2**64 - 1.
     seed: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    # Optional countdown timer in seconds chosen by the learner at
+    # start time (practice=1200, exam=900, power=600). NULL means no
+    # timer was selected (legacy attempts or topic/module quizzes).
+    time_limit_seconds: Mapped[int | None] = mapped_column(Integer, nullable=True)
     client_event_id: Mapped[str | None] = mapped_column(
         String(64), nullable=True
     )
