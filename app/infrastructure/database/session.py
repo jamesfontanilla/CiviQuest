@@ -35,6 +35,11 @@ if _raw_url.startswith("postgres://"):
 elif _raw_url.startswith("postgresql://") and "+psycopg2" not in _raw_url:
     _raw_url = "postgresql+psycopg2://" + _raw_url[len("postgresql://"):]
 
+# Supabase requires SSL. Append sslmode=require if connecting to Postgres
+# and no sslmode is already specified in the URL.
+if _raw_url.startswith("postgresql") and "sslmode=" not in _raw_url:
+    _raw_url += "?sslmode=require" if "?" not in _raw_url else "&sslmode=require"
+
 DATABASE_URL: str = _raw_url
 
 _is_sqlite: bool = DATABASE_URL.startswith("sqlite")
