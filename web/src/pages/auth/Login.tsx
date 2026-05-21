@@ -6,6 +6,7 @@ import { PageTransition } from "../../components/PageTransition";
 import { GlassCard } from "../../components/GlassCard";
 import { GlassInput } from "../../components/GlassInput";
 import { GlassButton } from "../../components/GlassButton";
+import { GoogleSignInWithCategoryPicker } from "../../components/GoogleSignInButton";
 
 interface LoginResponse {
   access_token: string;
@@ -127,6 +128,29 @@ export function Login() {
               Log In
             </GlassButton>
           </form>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              margin: "1.5rem 0",
+              gap: "0.75rem",
+            }}
+          >
+            <div style={{ flex: 1, height: "1px", background: "var(--glass-border-light)" }} />
+            <span
+              style={{
+                fontSize: "var(--font-size-sm)",
+                color: "var(--color-text-secondary)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              or
+            </span>
+            <div style={{ flex: 1, height: "1px", background: "var(--glass-border-light)" }} />
+          </div>
+
+          <GoogleSignInWithCategoryPicker />
 
           <p
             style={{

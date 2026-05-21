@@ -5,6 +5,7 @@ import { PageTransition } from "../../components/PageTransition";
 import { GlassCard } from "../../components/GlassCard";
 import { GlassInput } from "../../components/GlassInput";
 import { GlassButton } from "../../components/GlassButton";
+import { GoogleSignInButton } from "../../components/GoogleSignInButton";
 
 export function Signup() {
   const navigate = useNavigate();
@@ -189,6 +190,29 @@ export function Signup() {
               Sign Up
             </GlassButton>
           </form>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              margin: "1.5rem 0",
+              gap: "0.75rem",
+            }}
+          >
+            <div style={{ flex: 1, height: "1px", background: "var(--glass-border-light)" }} />
+            <span
+              style={{
+                fontSize: "var(--font-size-sm)",
+                color: "var(--color-text-secondary)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              or
+            </span>
+            <div style={{ flex: 1, height: "1px", background: "var(--glass-border-light)" }} />
+          </div>
+
+          <GoogleSignInButton category={category} text="signup_with" />
 
           <p
             style={{
