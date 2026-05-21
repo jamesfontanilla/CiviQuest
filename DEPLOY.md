@@ -54,7 +54,7 @@ Postgres persists data across all deploys.
 ## 3. Render (Backend)
 
 1. Sign up at [render.com](https://render.com).
-2. **New** → **Web Service** → connect your GitHub repo (`civiquest`).
+2. **New** → **Web Service** → connect your GitHub repo (`csnexus`).
 3. Configure the service:
    - **Branch**: `main`
    - **Root Directory**: (leave blank — the repo root)
@@ -69,7 +69,7 @@ Postgres persists data across all deploys.
    | `DATABASE_URL` | Your Supabase Session pooler URI from Step 1 |
    | `JWT_SECRET` | A random 32-byte hex string (see below) |
    | `RESEND_API_KEY` | Your Resend API key from Step 2 |
-   | `EMAIL_FROM_ADDR` | `CiviQuest <noreply@yourdomain.com>` |
+   | `EMAIL_FROM_ADDR` | `CSNexus <noreply@yourdomain.com>` |
    | `PYTHON_VERSION` | `3.11.9` |
 
    Generate a JWT secret:
@@ -80,7 +80,7 @@ Postgres persists data across all deploys.
 5. Click **Deploy**. The first boot will:
    - Create all tables in Supabase Postgres via `Base.metadata.create_all`
    - Seed the database if the admin user doesn't exist yet
-6. Note your Render URL (e.g. `https://civiquest-api.onrender.com`).
+6. Note your Render URL (e.g. `https://csnexus-api.onrender.com`).
 7. Verify: `GET https://your-url/health` → `{"status": "ok"}`
 
 ---
@@ -88,7 +88,7 @@ Postgres persists data across all deploys.
 ## 4. Vercel (Frontend)
 
 1. Sign up at [vercel.com](https://vercel.com).
-2. **New Project** → Import the `civiquest` repo from GitHub.
+2. **New Project** → Import the `csnexus` repo from GitHub.
 3. Set **Root Directory** to `web`.
 4. Vercel auto-detects Vite. Confirm:
    - **Build command**: `npm run build`
@@ -97,7 +97,7 @@ Postgres persists data across all deploys.
 
    | Key | Value |
    |-----|-------|
-   | `VITE_API_URL` | Your Render URL (e.g. `https://civiquest-api.onrender.com`) |
+   | `VITE_API_URL` | Your Render URL (e.g. `https://csnexus-api.onrender.com`) |
 
 6. Deploy.
 

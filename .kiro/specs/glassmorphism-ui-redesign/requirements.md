@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This specification defines the complete UI/UX redesign of the CiviQuest CSE Reviewer System frontend. The redesign transforms the existing interface into a premium Apple-inspired glassmorphism design using a warm gradient brown color palette. All existing functionality, routes, backend logic, authentication, and database structure remain unchanged — only the visual presentation layer and component architecture are refactored.
+This specification defines the complete UI/UX redesign of the CSNexus CSE Reviewer System frontend. The redesign transforms the existing interface into a premium Apple-inspired glassmorphism design using a warm gradient brown color palette. All existing functionality, routes, backend logic, authentication, and database structure remain unchanged — only the visual presentation layer and component architecture are refactored.
 
 ## Glossary
 
@@ -99,7 +99,7 @@ This specification defines the complete UI/UX redesign of the CiviQuest CSE Revi
 2. THE auth pages SHALL use GlassInput components for all form fields with frosted styling, inner shadows, and focus glow effects
 3. THE auth pages SHALL use GlassButton components for submit actions with gradient Brown_Palette backgrounds and Spring_Animation hover/click effects
 4. THE auth pages SHALL preserve all existing form validation logic, error display, API calls, and redirect behavior
-5. THE auth pages SHALL display the CiviQuest logo and heading with large hero typography using the Design_System font stack and Brown_Palette text colors
+5. THE auth pages SHALL display the CSNexus logo and heading with large hero typography using the Design_System font stack and Brown_Palette text colors
 6. IF a form submission fails with a validation error, THEN THE auth pages SHALL display the error message in a warm-tinted error style (soft red-brown) within the GlassCard without layout shift
 
 ### Requirement 7: Content Pages Redesign

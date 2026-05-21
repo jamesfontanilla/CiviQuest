@@ -56,7 +56,7 @@ class SmtpOtpSender(ExternalServiceBase):
         self.from_addr = (
             from_addr
             if from_addr is not None
-            else os.environ.get("EMAIL_FROM_ADDR", "CiviQuest <noreply@civiquest.app>")
+            else os.environ.get("EMAIL_FROM_ADDR", "CSNexus <noreply@csnexus.app>")
         )
 
     # ------------------------------------------------------------------
@@ -147,9 +147,9 @@ class SmtpOtpSender(ExternalServiceBase):
         else:
             purpose_label = "password reset"
 
-        subject = f"CiviQuest — Your {purpose_label} code"
+        subject = f"CSNexus — Your {purpose_label} code"
         body = (
-            f"Your CiviQuest {purpose_label} code is:\n\n"
+            f"Your CSNexus {purpose_label} code is:\n\n"
             f"    {code}\n\n"
             f"This code expires in 5 minutes. Do not share it with anyone.\n\n"
             f"If you didn't request this, you can safely ignore this email."

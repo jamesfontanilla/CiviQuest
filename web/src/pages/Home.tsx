@@ -30,7 +30,7 @@ export function Home() {
                 backgroundClip: "text",
               }}
             >
-              🎓 CiviQuest
+              🎓 CSNexus
             </h1>
             <p
               style={{
@@ -96,7 +96,7 @@ export function Home() {
             fontSize: "var(--font-size-sm)",
           }}
         >
-          CiviQuest — Built for Filipino CSE candidates. Free and open.
+          CSNexus — Built for Filipino CSE candidates. Free and open.
         </footer>
       </main>
     </PageTransition>

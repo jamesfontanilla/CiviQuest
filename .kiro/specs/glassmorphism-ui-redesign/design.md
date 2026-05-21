@@ -2,7 +2,7 @@
 
 ## Overview
 
-This design transforms the CiviQuest CSE Reviewer frontend from its current flat, light/dark themed UI into a premium Apple-inspired glassmorphism interface using a warm brown gradient palette. The redesign is purely visual — all existing functionality, routing, state management, and API integration remain unchanged.
+This design transforms the CSNexus CSE Reviewer frontend from its current flat, light/dark themed UI into a premium Apple-inspired glassmorphism interface using a warm brown gradient palette. The redesign is purely visual — all existing functionality, routing, state management, and API integration remain unchanged.
 
 ### Key Design Decisions
 
@@ -324,7 +324,7 @@ interface DesignTokens {
 ### tokens.css — Design Tokens
 
 ```css
-/* ===== CiviQuest Glassmorphism Design System ===== */
+/* ===== CSNexus Glassmorphism Design System ===== */
 
 :root {
   /* ── Brown Palette ── */

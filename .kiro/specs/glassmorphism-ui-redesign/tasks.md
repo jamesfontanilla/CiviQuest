@@ -2,7 +2,7 @@
 
 ## Overview
 
-This plan transforms the CiviQuest CSE Reviewer frontend from its current flat UI into a premium Apple-inspired glassmorphism interface. The migration follows a bottom-up approach: design system foundation → glass components → app shell → page migrations → cleanup. Each task builds incrementally so the app remains functional throughout.
+This plan transforms the CSNexus CSE Reviewer frontend from its current flat UI into a premium Apple-inspired glassmorphism interface. The migration follows a bottom-up approach: design system foundation → glass components → app shell → page migrations → cleanup. Each task builds incrementally so the app remains functional throughout.
 
 ## Tasks
 

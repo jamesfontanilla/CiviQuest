@@ -1,1 +1,1 @@
-"""CiviQuest application package."""
+"""CSNexus application package."""

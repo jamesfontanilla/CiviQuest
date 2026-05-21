@@ -1,4 +1,4 @@
-# CiviQuest
+# CSNexus
 
 A learning platform that helps Filipino candidates prepare for the Civil Service Examination (CSE). The backend is a FastAPI server backed by SQLite, paired with a Progressive Web App shell that supports offline lesson study and progress sync.
 

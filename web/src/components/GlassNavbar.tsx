@@ -50,8 +50,8 @@ export function GlassNavbar() {
       }}
     >
       {/* Logo */}
-      <Link to="/" className="glass-navbar-logo" aria-label="CiviQuest Home">
-        🎓 CiviQuest
+      <Link to="/" className="glass-navbar-logo" aria-label="CSNexus Home">
+        🎓 CSNexus
       </Link>
 
       {/* Desktop Nav */}

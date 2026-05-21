@@ -30,7 +30,7 @@ def _secret() -> str:
     if not secret:
         # Fallback for demo/free-tier deploys where env vars aren't set.
         # In production, always set JWT_SECRET to a unique random value.
-        secret = "civiquest-demo-secret-change-me-in-production-32b"
+        secret = "csnexus-demo-secret-change-me-in-production-32b"
     return secret
 
 

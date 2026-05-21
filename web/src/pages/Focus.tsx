@@ -37,7 +37,7 @@ interface SessionData {
   break_minutes: number;
 }
 
-const STORAGE_KEY = "civiquest_focus_state";
+const STORAGE_KEY = "csnexus_focus_state";
 const TOTAL_SESSIONS = 4;
 
 function playBeep() {
