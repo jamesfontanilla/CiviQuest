@@ -1,6 +1,10 @@
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import { slideUp, useReducedMotion } from "../design-system";
+
+// Module-level flag — survives component remounts.
+// On the very first page load, skip the enter animation so above-fold
+// content (hero) is visible immediately. Subsequent navigations animate.
+let isInitialPageLoad = true;
 
 interface PageTransitionProps {
   children: React.ReactNode;
@@ -8,17 +12,14 @@ interface PageTransitionProps {
 
 export function PageTransition({ children }: PageTransitionProps) {
   const reducedMotion = useReducedMotion();
-  const isFirstRender = useRef(true);
 
   if (reducedMotion) {
     return <>{children}</>;
   }
 
-  // Skip the enter animation on the very first mount so the hero
-  // (and any above-fold content) is visible immediately on page load.
-  const skipInitial = isFirstRender.current;
-  if (isFirstRender.current) {
-    isFirstRender.current = false;
+  const skipInitial = isInitialPageLoad;
+  if (isInitialPageLoad) {
+    isInitialPageLoad = false;
   }
 
   return (
