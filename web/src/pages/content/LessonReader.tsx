@@ -153,9 +153,7 @@ export function LessonReader() {
                 </div>
               ) : (
                 section.items.map((text, i) => (
-                  <div key={i} style={{ marginBottom: "1.5rem" }}>
-                    <MarkdownText text={text} style={{ lineHeight: 1.7, color: "var(--color-text)" }} />
-                  </div>
+                  <ExplanationDropdown key={i} text={text} index={i} />
                 ))
               )}
             </CollapsibleSection>
@@ -233,5 +231,79 @@ function CollapsibleSection({
         </div>
       )}
     </section>
+  );
+}
+
+function ExplanationDropdown({ text, index }: { text: string; index: number }) {
+  const [open, setOpen] = useState(index === 0);
+
+  // Extract the title from the markdown bold heading (first line like **Title**)
+  // The text format is: "**Title**\n\nBody..."
+  const titleMatch = text.match(/^\*\*(.+?)\*\*/);
+  const title = titleMatch ? titleMatch[1] : `Section ${index + 1}`;
+  const body = titleMatch ? text.slice(titleMatch[0].length).trim() : text;
+
+  // Detect if this is a numbered section (4.1, 4.2, etc.) — these get dropdowns
+  const isNumberedSection = /^\d+\.\d+\s/.test(title);
+
+  // Non-numbered sections (Introduction, Why it Matters, Learning Objectives, etc.)
+  // render inline without a dropdown
+  if (!isNumberedSection) {
+    return (
+      <div style={{ marginBottom: "1.5rem" }}>
+        <MarkdownText text={text} style={{ lineHeight: 1.7, color: "var(--color-text)" }} />
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ marginBottom: "0.75rem" }}>
+      <button
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+          padding: "0.625rem 0.75rem",
+          background: "rgba(255, 255, 255, 0.03)",
+          border: "1px solid var(--glass-border-medium)",
+          borderRadius: "var(--radius-md)",
+          cursor: "pointer",
+          fontSize: "0.9375rem",
+          fontWeight: 600,
+          color: "var(--color-text)",
+          textAlign: "left",
+        }}
+      >
+        {title}
+        <span
+          style={{
+            fontSize: "0.75rem",
+            color: "var(--color-text-muted)",
+            transition: "transform var(--transition-fast)",
+            transform: open ? "rotate(180deg)" : "rotate(0)",
+            flexShrink: 0,
+            marginLeft: "0.5rem",
+          }}
+        >
+          ▼
+        </span>
+      </button>
+      {open && (
+        <div
+          style={{
+            padding: "1rem 0.75rem",
+            borderLeft: "2px solid var(--color-accent)",
+            marginLeft: "0.5rem",
+            marginTop: "0.25rem",
+            animation: "fadeIn 0.2s ease",
+          }}
+        >
+          <MarkdownText text={body} style={{ lineHeight: 1.7, color: "var(--color-text)" }} />
+        </div>
+      )}
+    </div>
   );
 }
