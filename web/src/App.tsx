@@ -34,7 +34,7 @@ function AppContent() {
     <>
       <AmbientBackground />
       <GlassNavbar />
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <Routes location={location} key={location.pathname}>
           {/* Public auth routes */}
           <Route path="/login" element={<Login />} />
