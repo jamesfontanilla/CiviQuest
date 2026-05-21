@@ -29,6 +29,7 @@ from app.features.otp.service import OTPService
 from app.features.users.models import Role, User
 from app.features.users.repository import UserRepository
 from app.infrastructure.database.session import get_db
+from app.infrastructure.external.google_oauth import GoogleOAuthVerifier
 from app.infrastructure.external.offline_otp_writer import OfflineOtpWriter
 from app.infrastructure.external.smtp_otp_sender import SmtpOtpSender
 
@@ -53,6 +54,7 @@ def _build_auth_service(db: Session) -> AuthService:
             offline_writer=OfflineOtpWriter(),
             smtp_sender=SmtpOtpSender(),
         ),
+        google_verifier=GoogleOAuthVerifier(),
     )
 
 

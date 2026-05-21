@@ -65,6 +65,9 @@ class User(Base):
     display_name: Mapped[str] = mapped_column(String(255), nullable=False)
     age: Mapped[int] = mapped_column(Integer, nullable=False)
     category: Mapped[str] = mapped_column(String(32), nullable=False)
+    google_id: Mapped[str | None] = mapped_column(
+        String(255), nullable=True, unique=True, default=None
+    )
     role: Mapped[str] = mapped_column(
         String(16), nullable=False, default=Role.LEARNER.value, server_default=Role.LEARNER.value
     )
@@ -80,7 +83,7 @@ class User(Base):
     tz_name: Mapped[str] = mapped_column(
         String(64), nullable=False, default="UTC", server_default="UTC"
     )
-    password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
+    password_hash: Mapped[str | None] = mapped_column(String(255), nullable=True)
     cross_category_preview: Mapped[bool] = mapped_column(
         Boolean, nullable=False, default=False, server_default="0"
     )

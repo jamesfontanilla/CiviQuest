@@ -38,6 +38,11 @@ class UserRepository(BaseRepository[User]):
         stmt = select(User).where(User.email == normalized)
         return self.db.execute(stmt).scalar_one_or_none()
 
+    def get_by_google_id(self, google_id: str) -> User | None:
+        """Return the user linked to ``google_id`` or ``None``."""
+        stmt = select(User).where(User.google_id == google_id)
+        return self.db.execute(stmt).scalar_one_or_none()
+
     def create(  # type: ignore[override]
         self,
         payload: UserCreate,
@@ -61,6 +66,42 @@ class UserRepository(BaseRepository[User]):
             password_hash=password_hash,
         )
         self.db.add(user)
+        self.db.commit()
+        self.db.refresh(user)
+        return user
+
+    def create_from_google(
+        self,
+        *,
+        email: str,
+        display_name: str,
+        google_id: str,
+        category: str,
+    ) -> User:
+        """Create a user from Google OAuth data (no password, auto-verified).
+
+        Google has already verified the email, so the account starts as
+        VERIFIED. No password_hash is set — the user authenticates via
+        Google only (unless they later add a password via a future flow).
+        """
+        user = User(
+            email=email.strip().lower(),
+            display_name=display_name,
+            age=18,  # Default age for Google OAuth users; can be updated later
+            category=category,
+            google_id=google_id,
+            role=Role.LEARNER.value,
+            account_state=AccountState.VERIFIED.value,
+            password_hash=None,
+        )
+        self.db.add(user)
+        self.db.commit()
+        self.db.refresh(user)
+        return user
+
+    def link_google_id(self, user: User, google_id: str) -> User:
+        """Link a Google account to an existing user."""
+        user.google_id = google_id
         self.db.commit()
         self.db.refresh(user)
         return user

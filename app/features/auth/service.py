@@ -37,6 +37,7 @@ from app.features.otp.service import OTPService
 from app.features.users.models import AccountState, User
 from app.features.users.repository import UserRepository
 from app.features.users.schemas import UserCreate, validate_password
+from app.infrastructure.external.google_oauth import GoogleOAuthVerifier, GoogleUserInfo
 from app.infrastructure.security.jwt import encode_token
 from app.infrastructure.security.passwords import hash_password, verify_password
 
@@ -46,6 +47,8 @@ _ERR_INVALID_CREDENTIALS: Final[str] = "invalid_credentials"
 _ERR_LOCKED: Final[str] = "temporarily_locked"
 _ERR_BANNED: Final[str] = "account_banned"
 _ERR_NOT_VERIFIED: Final[str] = "email_not_verified"
+_ERR_GOOGLE_TOKEN_INVALID: Final[str] = "google_token_invalid"
+_ERR_CATEGORY_REQUIRED: Final[str] = "category_required"
 
 
 def _utcnow() -> datetime:
@@ -68,6 +71,7 @@ class AuthService:
         user_repo: UserRepository,
         auth_repo: AuthRepository,
         otp_service: OTPService,
+        google_verifier: GoogleOAuthVerifier | None = None,
         lockout_threshold: int = 5,
         lockout_window_minutes: int = 15,
         lockout_duration_minutes: int = 15,
@@ -75,6 +79,7 @@ class AuthService:
         self._user_repo = user_repo
         self._auth_repo = auth_repo
         self._otp_service = otp_service
+        self._google_verifier = google_verifier
         self._lockout_threshold = lockout_threshold
         self._lockout_window_minutes = lockout_window_minutes
         self._lockout_duration_minutes = lockout_duration_minutes
@@ -83,11 +88,11 @@ class AuthService:
     # signup
     # ------------------------------------------------------------------
 
-    def signup(self, payload: UserCreate, *, mode: str = "both") -> User:
-        """Create an account and auto-verify it (OTP disabled for testing).
+    def signup(self, payload: UserCreate, *, mode: str = "online") -> User:
+        """Create an UNVERIFIED account and issue a VERIFY_EMAIL OTP.
 
-        To re-enable OTP verification later, change account_state back to
-        UNVERIFIED and uncomment the otp_service.issue call below.
+        The account cannot log in until the OTP is verified via
+        ``POST /v1/auth/email-verifications``.
         """
         if self._user_repo.get_by_email(payload.email) is not None:
             raise HTTPException(
@@ -99,15 +104,14 @@ class AuthService:
         user = self._user_repo.create(
             payload,
             password_hash=password_hash,
-            account_state=AccountState.VERIFIED,  # Auto-verify (OTP disabled)
+            account_state=AccountState.UNVERIFIED,
         )
 
-        # OTP disabled for testing. Uncomment to re-enable:
-        # self._otp_service.issue(
-        #     user=user,
-        #     purpose=OTPPurpose.VERIFY_EMAIL,
-        #     mode=mode,
-        # )
+        self._otp_service.issue(
+            user=user,
+            purpose=OTPPurpose.VERIFY_EMAIL,
+            mode=mode,
+        )
         return user
 
     # ------------------------------------------------------------------
@@ -129,7 +133,7 @@ class AuthService:
         return self._user_repo.set_account_state(user, AccountState.VERIFIED)
 
     def resend_verify_email(
-        self, payload: OTPIssueRequest, *, mode: str = "both"
+        self, payload: OTPIssueRequest, *, mode: str = "online"
     ) -> None:
         """Re-issue a VERIFY_EMAIL OTP for ``payload.email`` if applicable.
 
@@ -217,7 +221,9 @@ class AuthService:
                 detail=_ERR_BANNED,
             )
 
-        if not verify_password(password, user.password_hash):
+        # Google-only accounts have no password_hash; reject with the same
+        # generic error to avoid leaking that the account is Google-linked.
+        if user.password_hash is None or not verify_password(password, user.password_hash):
             self._auth_repo.record_login_attempt(
                 user_id=user.id, attempted_at=now, success=False
             )
@@ -333,7 +339,7 @@ class AuthService:
     # ------------------------------------------------------------------
 
     def request_password_reset(
-        self, payload: PasswordResetRequest, *, mode: str = "both"
+        self, payload: PasswordResetRequest, *, mode: str = "online"
     ) -> None:
         """Issue a PASSWORD_RESET OTP if the email exists; otherwise no-op.
 
@@ -380,3 +386,107 @@ class AuthService:
         new_hash = hash_password(payload.new_password)
         self._user_repo.update(user, password_hash=new_hash)
         self._auth_repo.revoke_all_for_user(user.id)
+
+    # ------------------------------------------------------------------
+    # Google OAuth
+    # ------------------------------------------------------------------
+
+    def google_authenticate(
+        self,
+        *,
+        id_token: str,
+        category: str | None = None,
+    ) -> tuple[str, dict[str, Any], User, bool]:
+        """Authenticate via Google ID token. Handles both login and signup.
+
+        Flow:
+        1. Verify the Google ID token and extract user info.
+        2. Look up user by ``google_id``.
+        3. If found → login (mint JWT, return existing user).
+        4. If not found → check by email.
+           a. If email exists and no google_id → link Google account, login.
+           b. If email does not exist → signup (requires ``category``).
+
+        Returns:
+            ``(token, claims, user, is_new_user)`` — ``is_new_user`` is True
+            when a new account was created (signup), False for login.
+
+        Raises:
+            HTTPException 401: Invalid Google token.
+            HTTPException 403: User is banned.
+            HTTPException 422: Category required for new signup.
+            HTTPException 409: Email already registered with password-only
+                account and user should link via a different flow (future).
+        """
+        if self._google_verifier is None:
+            raise HTTPException(
+                status_code=status.HTTP_501_NOT_IMPLEMENTED,
+                detail="google_oauth_not_configured",
+            )
+
+        # Step 1: Verify the token
+        try:
+            google_info = self._google_verifier.verify_token(id_token)
+        except ValueError:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail=_ERR_GOOGLE_TOKEN_INVALID,
+            )
+
+        if not google_info.email:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail=_ERR_GOOGLE_TOKEN_INVALID,
+            )
+
+        # Step 2: Look up by google_id
+        user = self._user_repo.get_by_google_id(google_info.google_id)
+
+        is_new_user = False
+
+        if user is None:
+            # Step 4: Check by email
+            user = self._user_repo.get_by_email(google_info.email)
+
+            if user is not None:
+                # 4a: Existing email-based account — link Google ID
+                if user.is_banned:
+                    raise HTTPException(
+                        status_code=status.HTTP_403_FORBIDDEN,
+                        detail=_ERR_BANNED,
+                    )
+                self._user_repo.link_google_id(user, google_info.google_id)
+                # Also mark as verified since Google verified the email
+                if user.account_state != AccountState.VERIFIED.value:
+                    self._user_repo.set_account_state(user, AccountState.VERIFIED)
+            else:
+                # 4b: Brand new user — requires category
+                if not category:
+                    raise HTTPException(
+                        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                        detail=_ERR_CATEGORY_REQUIRED,
+                    )
+                user = self._user_repo.create_from_google(
+                    email=google_info.email,
+                    display_name=google_info.name or google_info.email.split("@")[0],
+                    google_id=google_info.google_id,
+                    category=category,
+                )
+                is_new_user = True
+        else:
+            # Step 3: Existing Google-linked user — login
+            if user.is_banned:
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail=_ERR_BANNED,
+                )
+
+        # Mint JWT session
+        token, claims = encode_token(sub=user.id)
+        self._auth_repo.create_session(
+            jti=claims["jti"],
+            user_id=user.id,
+            issued_at=datetime.fromtimestamp(claims["iat"], tz=timezone.utc),
+            expires_at=datetime.fromtimestamp(claims["exp"], tz=timezone.utc),
+        )
+        return token, claims, user, is_new_user

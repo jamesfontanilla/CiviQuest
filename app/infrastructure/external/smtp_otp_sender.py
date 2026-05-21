@@ -1,28 +1,45 @@
-"""SMTP-based OTP delivery adapter.
+"""Resend-backed OTP email delivery adapter.
 
-For MVP this is an env-gated stub. When ``SMTP_HOST`` is unset (or any
-constructor arg is passed as ``None``) the adapter is a no-op that returns
-``False`` from :meth:`send_otp` without raising. When a host is configured
-the adapter logs a structured "would send" line (without the OTP code, per
-Req 21.3 redaction policy) and returns ``True`` so callers can exercise the
-success path during integration runs.
+Sends transactional email via the Resend API (https://resend.com) using
+only Python's stdlib ``urllib`` — no extra dependency required.
 
-Live ``smtplib.SMTP`` integration lands in a future task; until then this
-adapter exists only so the service layer can depend on a stable surface.
+Free tier: 3,000 emails/month, 100/day. Sufficient for ~1,000 active users
+doing OTP and password-reset flows.
+
+Configuration (environment variables):
+    RESEND_API_KEY   — required for live sending (get from resend.com dashboard)
+    EMAIL_FROM_ADDR  — sender address, must be a verified Resend domain
+                       (default: "noreply@<your-verified-domain>")
+
+When ``RESEND_API_KEY`` is unset the adapter is a no-op that logs a warning
+and returns ``False``, so local dev and tests work without credentials.
+
+Security note (security-policy.md): the OTP code is sent in the email body
+but is NOT logged anywhere in this module. The structured log line emitted
+on success/failure contains only the recipient address and purpose.
 """
 
 from __future__ import annotations
 
+import json
 import logging
 import os
+import urllib.error
+import urllib.request
+from typing import Final
 
 from app.infrastructure.external.base import ExternalServiceBase
 
 logger = logging.getLogger(__name__)
 
+_RESEND_API_URL: Final[str] = "https://api.resend.com/emails"
+
 
 class SmtpOtpSender(ExternalServiceBase):
-    """Adapter that would send an OTP code via SMTP.
+    """Adapter that delivers OTP codes via the Resend email API.
+
+    The class is named ``SmtpOtpSender`` to preserve the existing injection
+    surface — all call sites use this name and no rename is needed.
 
     Constructor arguments default to environment variables when ``None`` is
     passed, matching the constructor-injection convention from
@@ -32,71 +49,109 @@ class SmtpOtpSender(ExternalServiceBase):
 
     def __init__(
         self,
-        host: str | None = None,
-        port: int = 587,
-        username: str | None = None,
-        password: str | None = None,
+        api_key: str | None = None,
         from_addr: str | None = None,
     ) -> None:
-        self.host = host if host is not None else os.environ.get("SMTP_HOST")
-        env_port = os.environ.get("SMTP_PORT")
-        self.port = port if env_port is None else int(env_port)
-        self.username = username if username is not None else os.environ.get("SMTP_USER")
-        self.password = password if password is not None else os.environ.get("SMTP_PASSWORD")
+        self.api_key = api_key if api_key is not None else os.environ.get("RESEND_API_KEY", "")
         self.from_addr = (
-            from_addr if from_addr is not None else os.environ.get("SMTP_FROM_ADDR")
+            from_addr
+            if from_addr is not None
+            else os.environ.get("EMAIL_FROM_ADDR", "CiviQuest <noreply@civiquest.app>")
         )
+
+    # ------------------------------------------------------------------
+    # public surface
+    # ------------------------------------------------------------------
 
     def send_otp(self, to_email: str, code: str, purpose: str) -> bool:
-        """Deliver the OTP code via SMTP (Resend or any SMTP provider).
+        """Send the OTP ``code`` to ``to_email`` via Resend.
 
-        Returns ``False`` (no-op) when no SMTP host is configured.
-        Returns ``True`` on successful send. Logs errors but does not raise
-        so the caller can fall back to offline delivery.
+        Returns ``True`` on success, ``False`` on any failure (missing key,
+        network error, API error). Logs errors but does not raise so the
+        caller can fall back to offline delivery.
+
+        The ``code`` value is intentionally NOT included in any log line
+        (Req 21.3 redaction policy).
         """
-        if not self.host:
-            return False
-
-        import smtplib
-        from email.mime.text import MIMEText
-
-        purpose_label = "email verification" if purpose == "VERIFY_EMAIL" else "password reset"
-        subject = f"CiviQuest - Your {purpose_label} code"
-        body = (
-            f"Your CiviQuest verification code is:\n\n"
-            f"    {code}\n\n"
-            f"This code expires in 5 minutes.\n\n"
-            f"If you didn't request this, you can safely ignore this email."
-        )
-
-        msg = MIMEText(body, "plain", "utf-8")
-        msg["Subject"] = subject
-        msg["From"] = self.from_addr or f"noreply@{self.host}"
-        msg["To"] = to_email
-
-        try:
-            with smtplib.SMTP(self.host, self.port, timeout=10) as server:
-                server.starttls()
-                if self.username and self.password:
-                    server.login(self.username, self.password)
-                server.sendmail(msg["From"], [to_email], msg.as_string())
-            logger.info(
-                "smtp_otp_sender.sent",
+        if not self.api_key:
+            logger.warning(
+                "resend_otp_sender.skipped: RESEND_API_KEY not set",
                 extra={"to_email": to_email, "purpose": purpose},
             )
-            return True
+            return False
+
+        subject, body = self._build_message(code, purpose)
+        payload = json.dumps(
+            {
+                "from": self.from_addr,
+                "to": [to_email],
+                "subject": subject,
+                "text": body,
+            }
+        ).encode("utf-8")
+
+        req = urllib.request.Request(
+            _RESEND_API_URL,
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+
+        try:
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                status = resp.status
+            if status in (200, 201):
+                logger.info(
+                    "resend_otp_sender.sent",
+                    extra={"to_email": to_email, "purpose": purpose},
+                )
+                return True
+            logger.error(
+                "resend_otp_sender.unexpected_status: %s",
+                status,
+                extra={"to_email": to_email, "purpose": purpose},
+            )
+            return False
+        except urllib.error.HTTPError as exc:
+            logger.error(
+                "resend_otp_sender.http_error: %s %s",
+                exc.code,
+                exc.reason,
+                extra={"to_email": to_email, "purpose": purpose},
+            )
+            return False
         except Exception as exc:
             logger.error(
-                "smtp_otp_sender.failed: %s",
+                "resend_otp_sender.failed: %s",
                 str(exc),
                 extra={"to_email": to_email, "purpose": purpose},
             )
             return False
 
     def health_check(self) -> bool:
-        """Return True iff a host is configured.
+        """Return True iff a Resend API key is configured."""
+        return bool(self.api_key)
 
-        A real TCP probe is intentionally avoided so health checks don't
-        introduce a network dependency in tests.
-        """
-        return bool(self.host)
+    # ------------------------------------------------------------------
+    # private helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _build_message(code: str, purpose: str) -> tuple[str, str]:
+        """Return ``(subject, plain-text body)`` for the given purpose."""
+        if purpose == "VERIFY_EMAIL":
+            purpose_label = "email verification"
+        else:
+            purpose_label = "password reset"
+
+        subject = f"CiviQuest — Your {purpose_label} code"
+        body = (
+            f"Your CiviQuest {purpose_label} code is:\n\n"
+            f"    {code}\n\n"
+            f"This code expires in 5 minutes. Do not share it with anyone.\n\n"
+            f"If you didn't request this, you can safely ignore this email."
+        )
+        return subject, body

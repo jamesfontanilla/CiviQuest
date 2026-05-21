@@ -28,6 +28,8 @@ from sqlalchemy.orm import Session
 
 from app.features.auth.repository import AuthRepository
 from app.features.auth.schemas import (
+    GoogleAuthRequest,
+    GoogleAuthResponse,
     LoginRequest,
     LoginResponse,
     PasswordResetConfirmRequest,
@@ -41,6 +43,7 @@ from app.features.users.models import User
 from app.features.users.repository import UserRepository
 from app.features.users.schemas import UserCreate, UserResponse
 from app.infrastructure.database.session import get_db
+from app.infrastructure.external.google_oauth import GoogleOAuthVerifier
 from app.infrastructure.external.offline_otp_writer import OfflineOtpWriter
 from app.infrastructure.external.smtp_otp_sender import SmtpOtpSender
 
@@ -74,6 +77,7 @@ def get_auth_service(
         user_repo=UserRepository(db=db),
         auth_repo=AuthRepository(db=db),
         otp_service=otp_service,
+        google_verifier=GoogleOAuthVerifier(),
     )
 
 
@@ -192,3 +196,38 @@ def reset_password(
     """Verify a reset OTP, rotate the password, revoke all sessions (Req 4.3, 4.4)."""
     service.reset_password(payload)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@router.post(
+    "/google",
+    status_code=status.HTTP_200_OK,
+    response_model=GoogleAuthResponse,
+)
+def google_authenticate(
+    payload: GoogleAuthRequest,
+    service: AuthService = Depends(get_auth_service),
+) -> dict:
+    """Authenticate via Google OAuth (login or signup).
+
+    For new users: ``category`` is required in the payload. The user is
+    created with VERIFIED status (Google already verified the email) and
+    a JWT is minted immediately.
+
+    For returning users: ``category`` is ignored. The existing account is
+    logged in and a JWT is minted.
+
+    If the Google email matches an existing email+password account, the
+    Google ID is linked to that account automatically.
+    """
+    token, claims, user, is_new_user = service.google_authenticate(
+        id_token=payload.id_token,
+        category=payload.category,
+    )
+    expires_in = int(claims["exp"]) - int(claims["iat"])
+    return {
+        "access_token": token,
+        "token_type": "Bearer",
+        "expires_in": expires_in,
+        "is_new_user": is_new_user,
+        "user": user,
+    }

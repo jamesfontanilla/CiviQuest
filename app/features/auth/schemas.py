@@ -10,7 +10,7 @@ inputs are matched against stored rows lowercase-insensitively.
 
 from __future__ import annotations
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from app.features.users.schemas import _validate_email
 
@@ -72,3 +72,53 @@ class PasswordResetConfirmRequest(BaseModel):
     @classmethod
     def _normalize_email(cls, v: str) -> str:
         return _validate_email(v)
+
+
+class GoogleAuthRequest(BaseModel):
+    """Payload for ``POST /v1/auth/google`` — Google OAuth login/signup.
+
+    ``id_token`` is the credential string returned by Google Identity Services
+    on the client side. The backend verifies it against Google's public keys.
+
+    ``category`` is required only for first-time signup (when the Google user
+    does not yet have an account). For returning users it is ignored.
+    """
+
+    id_token: str = Field(min_length=1)
+    category: str | None = None
+
+    @field_validator("category")
+    @classmethod
+    def _validate_category(cls, v: str | None) -> str | None:
+        if v is None:
+            return None
+        upper = v.strip().upper()
+        if upper not in ("PROFESSIONAL", "SUB_PROFESSIONAL"):
+            raise ValueError("category must be PROFESSIONAL or SUB_PROFESSIONAL")
+        return upper
+
+
+class GoogleAuthResponse(BaseModel):
+    """Response shape for ``POST /v1/auth/google``.
+
+    Extends ``LoginResponse`` with user info and a flag indicating whether
+    this was a new signup (so the client can redirect to onboarding/category
+    confirmation) or a returning login.
+    """
+
+    access_token: str
+    token_type: str = "Bearer"
+    expires_in: int
+    is_new_user: bool
+    user: "GoogleUserResponse"
+
+
+class GoogleUserResponse(BaseModel):
+    """Minimal user info returned after Google auth."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    email: str
+    display_name: str
+    category: str

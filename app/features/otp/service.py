@@ -89,7 +89,7 @@ class OTPService:
         *,
         user: User,
         purpose: OTPPurpose,
-        mode: str = _MODE_OFFLINE,
+        mode: str = _MODE_ONLINE,
         now: datetime | None = None,
     ) -> OTP:
         """Issue a fresh OTP for ``user`` and ``purpose``.

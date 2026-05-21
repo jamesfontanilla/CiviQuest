@@ -72,6 +72,36 @@ def smoke_env() -> Iterator[tuple[TestClient, str]]:
 
     from app.infrastructure.database.session import get_db
     from app.main import app
+    from fastapi import Depends
+
+    # Override the OTP service factory so SmtpOtpSender writes to the offline
+    # log instead of calling Resend. This lets the smoke test read OTP codes
+    # without real email credentials.
+    from app.features.auth.router import get_otp_service as _orig_get_otp_service
+    from app.features.otp.repository import OTPRepository
+    from app.features.otp.service import OTPService
+    from app.features.users.repository import UserRepository
+    from app.infrastructure.external.offline_otp_writer import OfflineOtpWriter
+    from app.infrastructure.external.smtp_otp_sender import SmtpOtpSender
+
+    class _OfflineFallbackSender(SmtpOtpSender):
+        """Smoke-test stub: writes to the offline log instead of calling Resend."""
+
+        def __init__(self) -> None:
+            super().__init__(api_key="")
+            self._writer = OfflineOtpWriter(log_path=otp_path)
+
+        def send_otp(self, to_email: str, code: str, purpose: str) -> bool:
+            self._writer.write_otp(email=to_email, purpose=purpose, code=code)
+            return True
+
+    def _smoke_get_otp_service(db: Session = Depends(get_db)) -> OTPService:
+        return OTPService(
+            user_repo=UserRepository(db=db),
+            otp_repo=OTPRepository(db=db),
+            offline_writer=OfflineOtpWriter(log_path=otp_path),
+            smtp_sender=_OfflineFallbackSender(),
+        )
 
     # Patch randbits to stay within SQLite signed 64-bit range (2^63 - 1)
     # The production code uses randbits(64) which can exceed SQLite's max.
@@ -94,6 +124,7 @@ def smoke_env() -> Iterator[tuple[TestClient, str]]:
             session.close()
 
     app.dependency_overrides[get_db] = override_get_db
+    app.dependency_overrides[_orig_get_otp_service] = _smoke_get_otp_service
 
     # Seed the database
     seed_session = TestingSessionLocal()
