@@ -56,6 +56,29 @@ export function MarkdownText({ text, style }: { text: string; style?: React.CSSP
     // Flush any pending bullets before non-bullet content
     flushBullets();
 
+    // H4 heading (####) — render as a styled box/label
+    if (trimmed.startsWith("#### ")) {
+      const heading = trimmed.slice(5);
+      elements.push(
+        <div
+          key={key++}
+          style={{
+            margin: "1rem 0 0.5rem 0",
+            padding: "0.5rem 0.75rem",
+            background: "rgba(212, 165, 116, 0.08)",
+            border: "1px solid var(--color-accent, #d4a574)",
+            borderRadius: "var(--radius-md, 8px)",
+            fontWeight: 600,
+            fontSize: "0.9375rem",
+            color: "var(--color-text)",
+          }}
+        >
+          <InlineMarkdown text={heading} />
+        </div>
+      );
+      continue;
+    }
+
     // Empty line = paragraph break
     if (trimmed === "") {
       elements.push(<br key={key++} />);
