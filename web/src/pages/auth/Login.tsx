@@ -16,6 +16,7 @@ interface LoginResponse {
 
 export function Login() {
   const navigate = useNavigate();
+  const [showEmailForm, setShowEmailForm] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -32,7 +33,6 @@ export function Login() {
         password,
       });
       login(res.access_token);
-      // Redirect admins to admin dashboard, learners to modules
       if (email.toLowerCase() === "admin@cse.local") {
         navigate("/admin");
       } else {
@@ -79,56 +79,10 @@ export function Login() {
             Log In
           </h1>
 
-          <form onSubmit={handleSubmit} aria-label="Login form">
-            <GlassInput
-              id="login-email"
-              label="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              autoComplete="email"
-            />
+          {/* Google OAuth */}
+          <GoogleSignInWithCategoryPicker />
 
-            <GlassInput
-              id="login-password"
-              label="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              autoComplete="current-password"
-            />
-
-            {error && (
-              <p
-                role="alert"
-                style={{
-                  color: "var(--color-danger)",
-                  fontSize: "var(--font-size-sm)",
-                  marginBottom: "1rem",
-                  padding: "0.5rem 0.75rem",
-                  borderRadius: "var(--radius-sm)",
-                  background: "rgba(229, 115, 115, 0.1)",
-                  border: "1px solid rgba(229, 115, 115, 0.2)",
-                }}
-              >
-                {error}
-              </p>
-            )}
-
-            <GlassButton
-              variant="primary"
-              type="submit"
-              disabled={loading}
-              loading={loading}
-              aria-label="Log in"
-              style={{ width: "100%", marginTop: "0.5rem" }}
-            >
-              Log In
-            </GlassButton>
-          </form>
-
+          {/* Divider */}
           <div
             style={{
               display: "flex",
@@ -150,7 +104,80 @@ export function Login() {
             <div style={{ flex: 1, height: "1px", background: "var(--glass-border-light)" }} />
           </div>
 
-          <GoogleSignInWithCategoryPicker />
+          {/* Continue with Email toggle */}
+          {!showEmailForm ? (
+            <GlassButton
+              variant="secondary"
+              type="button"
+              onClick={() => setShowEmailForm(true)}
+              aria-label="Continue with email"
+              style={{ width: "100%" }}
+            >
+              Continue with Email
+            </GlassButton>
+          ) : (
+            <form onSubmit={handleSubmit} aria-label="Login form">
+              <GlassInput
+                id="login-email"
+                label="Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                autoComplete="email"
+              />
+
+              <GlassInput
+                id="login-password"
+                label="Password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                autoComplete="current-password"
+              />
+
+              {error && (
+                <p
+                  role="alert"
+                  style={{
+                    color: "var(--color-danger)",
+                    fontSize: "var(--font-size-sm)",
+                    marginBottom: "1rem",
+                    padding: "0.5rem 0.75rem",
+                    borderRadius: "var(--radius-sm)",
+                    background: "rgba(229, 115, 115, 0.1)",
+                    border: "1px solid rgba(229, 115, 115, 0.2)",
+                  }}
+                >
+                  {error}
+                </p>
+              )}
+
+              <GlassButton
+                variant="primary"
+                type="submit"
+                disabled={loading}
+                loading={loading}
+                aria-label="Log in"
+                style={{ width: "100%", marginTop: "0.5rem" }}
+              >
+                Log In
+              </GlassButton>
+
+              <p
+                style={{
+                  marginTop: "0.75rem",
+                  fontSize: "var(--font-size-sm)",
+                  textAlign: "center",
+                }}
+              >
+                <Link to="/forgot-password" style={{ color: "var(--color-accent)" }}>
+                  Forgot password?
+                </Link>
+              </p>
+            </form>
+          )}
 
           <p
             style={{
@@ -160,12 +187,9 @@ export function Login() {
               color: "var(--color-text-secondary)",
             }}
           >
-            <Link to="/forgot-password" style={{ color: "var(--color-accent)" }}>
-              Forgot password?
-            </Link>
-            {" · "}
+            Don't have an account?{" "}
             <Link to="/signup" style={{ color: "var(--color-accent)" }}>
-              Create account
+              Sign up
             </Link>
           </p>
         </GlassCard>
