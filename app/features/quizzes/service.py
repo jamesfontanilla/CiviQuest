@@ -547,15 +547,6 @@ class QuizService:
         chosen: list[Question],
         seed: int,
         started_at: datetime,
-    def _persist_assembled_attempt(
-        self,
-        *,
-        user: User,
-        scope_level: LevelScope,
-        scope_id: int,
-        chosen: list[Question],
-        seed: int,
-        started_at: datetime,
         time_limit_seconds: int | None = None,
     ) -> QuizAttemptInProgressResponse:
         """Persist attempt + answer rows; return the in-progress shape.
